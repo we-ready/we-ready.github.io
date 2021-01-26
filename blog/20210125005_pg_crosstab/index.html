@@ -1,0 +1,193 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.30.3"/><title data-react-helmet="true">WeReady | postgres 数据库的数据透视表</title><link as="script" rel="preload" href="/webpack-runtime-c599338a479eecb59145.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-b7479a33c6acc860ad47.js"/><link as="script" rel="preload" href="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d3f9f9de51ab6dc8d6af.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js"/><link as="fetch" rel="preload" href="/page-data\blog\20210125005_pg_crosstab\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561680736.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2718502863.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div id="__page_top__"></div><div style="position:fixed;bottom:40px;right:20px;z-index:999;font-size:2rem"><a href="#__page_top__"><span role="img" aria-label="Up">👍</span></a></div><div style="background:linear-gradient(90deg,#00818e,#00b8cb)" class="sc-bdfBwQ cIKpxU"><div class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div style="width:100%;display:flex;justify-content:center"><div style="width:20rem;color:#fff"><nav class="sc-jSgupP ckDfJz"><ul class="sc-gKsewC gnwqMi"><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></nav></div></div></div></div><div style="background:#fff;padding:1rem" class="sc-bdfBwQ cIKpxU"><div style="display:flex" class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div class="sc-bkzZxe cSnsVU"><h1>背景 &#x26; 需求</h1>
+<p>几乎所有系统的<code>数据表</code>，可能都会有一些<code>状态字段</code>，这些字段的取值是有限个<code>状态</code>。无论是运营的需求层面，还是程序运行的业务逻辑判断层面，往往需要对这些<code>数据表</code>中的记录，根据不同的状态进行汇总统计，获取不同状态下，所有记录的统计结果。</p>
+<p>例如，假设一个 <em>任务</em> <code>数据表</code>(<code>t_tasks</code>)：</p>
+<table>
+<thead>
+<tr>
+<th align="center">id</th>
+<th align="center">project_code</th>
+<th align="center">state</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">1001</td>
+<td align="center">PRJ_1</td>
+<td align="center">WORKING</td>
+</tr>
+<tr>
+<td align="center">1002</td>
+<td align="center">PRJ_1</td>
+<td align="center">WORKING</td>
+</tr>
+<tr>
+<td align="center">1003</td>
+<td align="center">PRJ_1</td>
+<td align="center">DONE</td>
+</tr>
+<tr>
+<td align="center">1004</td>
+<td align="center">PRJ_2</td>
+<td align="center">PENDING</td>
+</tr>
+<tr>
+<td align="center">1005</td>
+<td align="center">PRJ_2</td>
+<td align="center">WORKING</td>
+</tr>
+<tr>
+<td align="center">1006</td>
+<td align="center">PRJ_2</td>
+<td align="center">WORKING</td>
+</tr>
+<tr>
+<td align="center">1007</td>
+<td align="center">PRJ_2</td>
+<td align="center">DONE</td>
+</tr>
+<tr>
+<td align="center">1008</td>
+<td align="center">PRJ_3</td>
+<td align="center">PENDING</td>
+</tr>
+<tr>
+<td align="center">1009</td>
+<td align="center">PRJ_3</td>
+<td align="center">WORKING</td>
+</tr>
+</tbody>
+</table>
+<p>期望得到这样的统计结果：</p>
+<table>
+<thead>
+<tr>
+<th align="center">project_code</th>
+<th align="center">pending</th>
+<th align="center">working</th>
+<th align="center">done</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">PRJ_1</td>
+<td align="center"></td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_2</td>
+<td align="center">1</td>
+<td align="center">2</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_3</td>
+<td align="center">1</td>
+<td align="center">1</td>
+<td align="center"></td>
+</tr>
+</tbody>
+</table>
+<h1>解决方案</h1>
+<pre><code>SELECT *
+FROM crosstab(
+  'SELECT project_code::text, state, count(id) FROM t_tasks GROUP BY grouping sets((project_code, state)) ORDER BY 1,2',
+  $$values('PENDING'::text),('WORKING'::text),('DONE'::text)$$
+)
+AS (project text, PENDING int, WORKING int, DONE int)
+</code></pre>
+<blockquote>
+<p><code>crosstab</code> 是 <code>postgres</code> 的扩展功能，使用之前，需要安装相关扩展</p>
+</blockquote>
+<h1>说明</h1>
+<ul>
+<li><code>$$</code> 相当于单引号（<code>crosstab</code> 的参数是一个 SQL 语句字符串，字符串是由单引号括起来的，因此，在单引号里面，不能再使用单引号，这时候，可以使用 <code>$$</code> 代替单引号）</li>
+<li><code>crosstab</code> 有两个<code>入参</code>：<code>数据集</code>，<code>状态集</code></li>
+<li><code>数据集</code>有三列：<code>行标识</code>, <code>状态</code>, <code>取值</code></li>
+<li><code>状态集</code>：所有状态的列表</li>
+</ul>
+<h3>中间结果</h3>
+<p><code>SELECT project_code::text, state, count(id) FROM t_tasks GROUP BY grouping sets((project_code, state)) ORDER BY 1,2</code></p>
+<table>
+<thead>
+<tr>
+<th align="center">project_code</th>
+<th align="center">state</th>
+<th align="center">count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">PRJ_1</td>
+<td align="center">WORKING</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">PRJ_1</td>
+<td align="center">DONE</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_2</td>
+<td align="center">PENDING</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_2</td>
+<td align="center">WORKING</td>
+<td align="center">2</td>
+</tr>
+<tr>
+<td align="center">PRJ_2</td>
+<td align="center">DONE</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_3</td>
+<td align="center">PENDING</td>
+<td align="center">1</td>
+</tr>
+<tr>
+<td align="center">PRJ_3</td>
+<td align="center">WORKING</td>
+<td align="center">1</td>
+</tr>
+</tbody>
+</table>
+<h1>关键点</h1>
+<ul>
+<li>构造一个 SQL 语句，能够取得中间结果；这个 SQL 语句，就是 <code>crosstab</code> 的第一个参数：<code>数据集</code></li>
+<li>指明一个<code>状态集</code>，作为 <code>crosstab</code> 的第二个参数</li>
+</ul>
+<h1>补充</h1>
+<h2>状态集 的构造方式</h2>
+<h3>固定的<code>状态集</code></h3>
+<pre><code>$$values('PENDING'::text),('WORKING'::text),('DONE'::text)$$
+</code></pre>
+<h3>动态的<code>状态集</code>，动态构造</h3>
+<pre><code>const stateArray = ['PENDING', 'WORKING', 'DONE']
+const cstr = ....
+const sql = `
+  SELECT 
+    distinct qa.serial_code AS id,
+    fb.form_serial_code, fb.form_title, form_index, fb.form_id, 
+    fb.notice_template_id, fb.notice_template_code,
+    fb.notice_serial_code, fb.notice_title, fb.notice_id, 
+    fb.employer_path, fb.employer_id, 
+    fb.source_path, fb.source_id, 
+    fb.created_by,
+    fb.created_when,
+    fb.updated_by,
+    fb.updated_when,
+    qa.* 
+  FROM crosstab(
+    'SELECT serial_code, question_key, answer_value FROM dbt_biz_logs WHERE ${cstr} ORDER BY 1, 2',
+    'SELECT * FROM unnest(array[${stateArray}]) as exp'
+  )
+  AS qa(serial_code text, ${qtuple})
+  LEFT JOIN dbt_biz_logs fb ON fb.serial_code=qa.serial_code AND fb.category='FORM_FEEDBACK_QA'
+`
+</code></pre>
+<h3>来自数据库的枚举类型</h3>
+<pre><code>'SELECT e.enumlabel FROM pg_type t, pg_enum e WHERE t.oid=e.enumtypid AND t.typname=''dbe_workflow_task_result'' ORDER BY 1'
+</code></pre></div><div class="sc-idOhPF kGntgQ"><div class="sc-dIUggk XavQL"><h4>数据统计</h4><h5>Chis Wei</h5><h5>postgres;crosstab;pivot;行列转置</h5><h5>postgresql</h5><h5>实战技巧</h5></div></div></div></div><div style="background:#262626;height:6rem;line-height:6rem;color:#fff" class="sc-bdfBwQ cIKpxU"><div style="display:flex;justify-content:space-between" class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span role="img" aria-label="Email">📧</span><span>18621569380</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈</span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210125005_pg_crosstab";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-b7479a33c6acc860ad47.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e3c89a1e84e64be41022.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d3f9f9de51ab6dc8d6af.js" async=""></script><script src="/app-b7479a33c6acc860ad47.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-c599338a479eecb59145.js" async=""></script></body></html>

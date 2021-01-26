@@ -1,0 +1,215 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.30.3"/><title data-react-helmet="true">WeReady | Docker Compose 的安装设置</title><link as="script" rel="preload" href="/webpack-runtime-c599338a479eecb59145.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-b7479a33c6acc860ad47.js"/><link as="script" rel="preload" href="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d3f9f9de51ab6dc8d6af.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js"/><link as="fetch" rel="preload" href="/page-data\blog\20210125002_docker_compose_setup\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561680736.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2718502863.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div id="__page_top__"></div><div style="position:fixed;bottom:40px;right:20px;z-index:999;font-size:2rem"><a href="#__page_top__"><span role="img" aria-label="Up">👍</span></a></div><div style="background:linear-gradient(90deg,#00818e,#00b8cb)" class="sc-bdfBwQ cIKpxU"><div class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div style="width:100%;display:flex;justify-content:center"><div style="width:20rem;color:#fff"><nav class="sc-jSgupP ckDfJz"><ul class="sc-gKsewC gnwqMi"><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-fubCfw irPtrP"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></nav></div></div></div></div><div style="background:#fff;padding:1rem" class="sc-bdfBwQ cIKpxU"><div style="display:flex" class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div class="sc-bkzZxe cSnsVU"><h1>Docker Compose 的安装设置</h1>
+<h2>参考文章</h2>
+<ul>
+<li><a href="https://docs.docker.com/install/linux/docker-ce/centos/">Get Docker Engine - Community for CentOS</a></li>
+<li><a href="https://www.cnblogs.com/morang/p/9501223.html">docker 及 docker-compose 的快速安装和简单使用</a></li>
+</ul>
+<h2>Install Docker</h2>
+<ol>
+<li>SET UP THE REPOSITORY</li>
+</ol>
+<pre><code># sudo yum install -y yum-utils device-mapper-persistent-data lvm2
+# sudo yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+</code></pre>
+<ol start="2">
+<li>INSTALL DOCKER ENGINE - COMMUNITY</li>
+</ol>
+<pre><code># sudo yum install docker-ce docker-ce-cli containerd.io
+</code></pre>
+<ol start="3">
+<li>Start Docker</li>
+</ol>
+<pre><code>$ sudo systemctl start docker
+</code></pre>
+<ol start="4">
+<li>Verify that Docker Engine - Community is installed correctly by running the hello-world image.</li>
+</ol>
+<pre><code>$ sudo docker run hello-world
+</code></pre>
+<ol start="5">
+<li>Verify that Docker Engine - Community is installed correctly by running the whalesay image. (Optional)</li>
+<li><a href="https://hub.docker.com/r/docker/whalesay">docker/whalesa</a></li>
+</ol>
+<pre><code>$ docker run docker/whalesay cowsay boo
+</code></pre>
+<h2>使用中国区官方镜像</h2>
+<ol>
+<li>create json file</li>
+</ol>
+<pre><code># vi /etc/docker/daemon.json
+# cat /etc/docker/daemon.json
+</code></pre>
+<blockquote>
+<p>daemon.json</p>
+</blockquote>
+<pre><code>{
+  "registry-mirrors": ["https://registry.docker-cn.com"]
+}
+</code></pre>
+<ol start="2">
+<li>restart docker</li>
+</ol>
+<pre><code># systemctl daemon-reload
+# systemctl restart docker
+# systemctl restart docker.service
+</code></pre>
+<ol start="3">
+<li>reboot server</li>
+</ol>
+<pre><code># reboot
+</code></pre>
+<h2>Docker Compose</h2>
+<ol>
+<li>Download Docker Compose (with Daocloud Mirror)</li>
+</ol>
+<pre><code># curl -L https://get.daocloud.io/docker/compose/releases/download/1.22.0/docker-compose-`uname -s`-`uname -m` > /usr/local/bin/docker-compose
+</code></pre>
+<ol>
+<li>Apply executable permissions to the binary:</li>
+</ol>
+<pre><code># chmod +x /usr/local/bin/docker-compose
+</code></pre>
+<ol>
+<li>Verify that Docker Compose</li>
+</ol>
+<pre><code># docker-compose --version
+</code></pre>
+<h2>基本命令</h2>
+<h3>run - Run a container</h3>
+<ul>
+<li>tag</li>
+</ul>
+<pre><code># docker run redis:4.0
+</code></pre>
+<ul>
+<li>STDIN</li>
+<li>-it (interactive mode, attach terminal)</li>
+<li>attach / detach (-d)</li>
+<li>Port Mapping (external:internal)</li>
+</ul>
+<pre><code># docker run -p 8001:3000 xxxxx
+# docker run -p 8002:3000 xxxxx
+# docker run -p 8003:3000 xxxxx
+# docker run -p 8004:3000 xxxxx
+</code></pre>
+<ul>
+<li>Volume Mapping</li>
+</ul>
+<pre><code># docker run --name db_pg_1 -v /my/own/datadir:/var/lib/postgresql/data -d postgres
+</code></pre>
+<ul>
+<li>Environment Variables</li>
+</ul>
+<pre><code># docker run -e APP_COLOR=blue XXXX
+</code></pre>
+<h3>ps - List containers</h3>
+<h3>stop - Stop a container</h3>
+<h3>rm - Remove a container</h3>
+<h3>rmi - Remove images</h3>
+<h3>pull - Download an image</h3>
+<h3>exec - Execute a command</h3>
+<h3>attach - attach a container</h3>
+<h3>inspect - inspect a container</h3>
+<h3>logs - show container's log</h3>
+<h3>示例</h3>
+<pre><code># docker run centos
+# docker run -it centos bash
+# docker ps
+# docker ps -a
+# docker run centos sleep 20
+# docker run -d --name thistest centos sleep 100
+# docker exec thistest cat /etc/*release*
+# docker stop thistest
+# docker rm xxx xxx xxx
+# docker images
+# docker rmi xxxx
+# docker pull centos
+# docker inspect thistest
+# docker logs thistest
+</code></pre>
+<h2>典型镜像</h2>
+<h3>使用 Node:alpine 启动 js 脚本</h3>
+<pre><code># docker run -it --rm --name node_main_1 -v "$PWD":/usr/src/app -w /usr/src/app node:11.10.1-alpine node index.js
+</code></pre>
+<h3>使用 postgres:alpine 管理数据库</h3>
+<ol>
+<li>下载镜像</li>
+</ol>
+<pre><code># docker pull postgres:alpine
+</code></pre>
+<ol>
+<li>启动容器</li>
+</ol>
+<pre><code># docker run --name dbpg -e POSTGRES_PASSWORD=123456 -p 5432:5432 -d postgres:alpine
+</code></pre>
+<ol>
+<li>进入容器</li>
+</ol>
+<pre><code># docker exec -it dbpg /bin/bash
+</code></pre>
+<ol>
+<li>启动 psql </li>
+</ol>
+<pre><code>psql -U postgres -d postgres
+</code></pre>
+<h2>参考</h2>
+<ul>
+<li><a href="https://kodekloud.com/courses/296044">Docker for the Absolute Beginner - Hands On</a></li>
+<li><a href="https://docs.docker.com/">Docker Documents</a></li>
+<li><a href="https://www.jianshu.com/p/9ab7b89637e7">docker实现postgresql</a></li>
+<li><a href="https://www.cnblogs.com/whych/p/9595671.html">Docker网络和容器的通信</a></li>
+<li><a href="https://blog.csdn.net/u013355826/article/details/84987233">docker中容器之间通信方式</a></li>
+<li><a href="https://www.cnblogs.com/neptunemoon/p/6512121.html#toc_30">使用docker-compose 大杀器来部署服务</a></li>
+</ul>
+<h2>集成环境</h2>
+<h3>下载 Node 镜像</h3>
+<pre><code># docker pull node:12.14.0-alpine
+</code></pre>
+<h3>安装 Nodejs</h3>
+<ol>
+<li>download and install npm binary pakage</li>
+</ol>
+<pre><code>[root@ ~]# wget https://nodejs.org/dist/v12.14.0/node-v12.14.0-linux-x64.tar.xz
+[root@ ~]# tar -xvf node-v12.14.0-linux-x64.tar.xz
+[root@ ~]# ln -s ~/node-v12.14.0-linux-x64/bin/node /usr/bin/node
+[root@ ~]# ln -s ~/node-v12.14.0-linux-x64/bin/npm /usr/bin/npm
+[root@ ~]# npm -v
+[root@ ~]# node -v
+</code></pre>
+<p>可以使用国内镜像</p>
+<pre><code>[root@ ~]# wget https://npm.taobao.org/mirrors/node/v12.14.0/node-v12.14.0-linux-x64.tar.gz
+</code></pre>
+<blockquote>
+<p>install wget in case it is not installed</p>
+</blockquote>
+<pre><code>[root@ ~]# yum -y install wget
+</code></pre>
+<ol start="2">
+<li>edit profile</li>
+</ol>
+<pre><code>[root@ ~]# vim /etc/profile
+[root@ ~]# cat /etc/profile
+</code></pre>
+<blockquote>
+<p>profile file content</p>
+</blockquote>
+<pre><code>export NODE_PATH="/root/node-v12.14.0-linux-x64"
+export PATH=$NODE_PATH/bin:$PATH
+</code></pre>
+<ol start="3">
+<li>restart the server from console</li>
+</ol>
+<pre><code>[root@ ~]# reboot
+</code></pre>
+<ol start="4">
+<li>install global npm packages</li>
+</ol>
+<pre><code>[root@ ~]# npm install -g yarn
+</code></pre>
+<pre><code>[root@ ~]# npm install -g gulp
+[root@ ~]# npm install -g cross-env
+[root@ ~]# npm install -g rimraf
+</code></pre>
+<p>可以使用淘宝镜像</p>
+<pre><code>npm install xxxx -g --registry=http://registry.npm.taobao.org
+</code></pre></div><div class="sc-idOhPF kGntgQ"><div class="sc-dIUggk XavQL"><h4>开发环境</h4><h5>Chis Wei</h5><h5>Docker;Docker Compose;集成环境</h5><h5></h5><h5>指导手册</h5></div></div></div></div><div style="background:#262626;height:6rem;line-height:6rem;color:#fff" class="sc-bdfBwQ cIKpxU"><div style="display:flex;justify-content:space-between" class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span role="img" aria-label="Email">📧</span><span>18621569380</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈</span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210125002_docker_compose_setup";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-b7479a33c6acc860ad47.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-e3c89a1e84e64be41022.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-2eb30a8149d66a1b67b1.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d3f9f9de51ab6dc8d6af.js" async=""></script><script src="/app-b7479a33c6acc860ad47.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-c599338a479eecb59145.js" async=""></script></body></html>
