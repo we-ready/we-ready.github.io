@@ -1,0 +1,224 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.30.3"/><title data-react-helmet="true">WeReady | 利用 weready npm 包实现管理后台构建</title><link as="script" rel="preload" href="/webpack-runtime-041a771d1d9109fa1b65.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-b7479a33c6acc860ad47.js"/><link as="script" rel="preload" href="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-75088c8c7b4e843022da.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-049ef76f24d42680e994.js"/><link as="fetch" rel="preload" href="/page-data\blog\20210128003_weready_npm\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561680736.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2718502863.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div id="__page_top__"></div><div style="position:fixed;bottom:2rem;right:2rem;z-index:999;font-size:2rem"><a href="#__page_top__"><span role="img" aria-label="Up">👍</span></a></div><div style="background:linear-gradient(90deg,#00818e,#00b8cb)" class="sc-bdfBwQ cIKpxU"><div class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div class="sc-dQppl cQZIoF container"><div class="sc-bqyKva ehfErK button"><span color="#999" class="sc-hKgILt dunqBZ"></span></div><ul class="sc-kEjbxe dHOqey menu"><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></div><div style="width:100%;display:flex;justify-content:center"><div style="width:20rem;color:#fff"><nav class="sc-gKsewC gnwqMi"><ul class="sc-iBPRYJ cOWINi"><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></nav></div></div></div></div><div style="background:#fff;padding:1em" class="sc-bdfBwQ cIKpxU"><div class="sc-lmoMRL iqbrwR"><div class="sc-iJuUWI fTbwUB"><h1>利用 weready npm 包实现管理后台构建</h1>
+<h2>weready npm lib</h2>
+<ul>
+<li><code>weready-base-front</code> 包含了前端代码一些通用的底层操作，包括：对后端及第三方接口的各种访问（<code>get</code>，<code>post</code>，<code>put</code>，<code>delete</code>），对 <code>restful api</code> 实现增删改查 和 文件传输，以及前端浏览器的 <code>storage</code> 的访问，进行数缓存；</li>
+<li><code>weready-bee-styled</code> 包含了利用 <code>styled-components</code> 封装的 react 组件，比如：文件上传组件</li>
+<li><code>weready-context-provider</code> 包含了利用 <code>react context</code> 封装的针对 <code>RESTFUL</code> 接口类型数据模型的上下文（model context），及相应的 增删改查 的异步操作，和 对应的 <code>Provider</code>；还包含了  <code>react context</code> 封装的，针对用户常规的异步操作功能，比如：注册、登录、退出登录、修改个人资料、修改密码、找回密码、等等</li>
+<li><code>weready-ant-plus</code> 包含了基于 <code>ant design</code> 封装的列表、表单，并包含了常规操作</li>
+</ul>
+<h2>使用说明</h2>
+<ul>
+<li>通过 <code>create-react-app</code> 脚手架创建前端应用</li>
+<li>添加 <code>typescript</code> 支持</li>
+<li>通过 <code>yarn add</code> 引入　<code>ant design</code> <code>styled-components</code> 等，第三方库</li>
+<li>通过 <code>yarn add</code> 引入　<code>weready-base-front</code> <code>weready-bee-styled</code> <code>weready-ant-plus</code> <code>weready-context-provider</code></li>
+<li>在 <code>App.tsx</code> 中引入 <code>context provider</code>，并全局注入</li>
+</ul>
+<pre><code>export default function App () { return (
+  &#x3C;Router ref={ref => thisApp.router = ref}>
+    &#x3C;ProviderUser superRequest={superRequest} userCache={userCache} url={userUrl}>
+      &#x3C;ProviderEntities superRequest={superRequest}>
+        &#x3C;GlobalStyle />
+        &#x3C;Route component={AppRoute}/>
+      &#x3C;/ProviderEntities>
+    &#x3C;/ProviderUser>
+  &#x3C;/Router>
+)}
+</code></pre>
+<ul>
+<li>某个业务逻辑中，定义所需包含数据的相关字段</li>
+</ul>
+<pre><code>export const TABLE_COLUMNS = [
+  ...CONFIG.STANDARD_TABLE_COLUMNS('CONTENT').filter(col => (
+    ['category', 'tree_path', 'serial_code', 'name', 'title', 'subtitle', 'comments', 'type', 'release_datetime', 'updated_when', 'created_when'].includes(col.dataIndex)
+  )),
+];
+
+export const TABLE_COLUMNS_VISIBLE = ['serial_code', 'name', 'title', 'subtitle', 'comments', 'type', 'release_datetime', ];
+</code></pre>
+<blockquote>
+<p>常用的字段，可以统一定义</p>
+</blockquote>
+<pre><code>  { 
+    title: '名称',
+    dataIndex: 'name', 
+    sortDirections: ['descend', 'ascend'],
+    type: 'STRING',
+  },
+  { 
+    title: '标识',
+    dataIndex: 'label', 
+    sortDirections: ['descend', 'ascend'],
+    type: 'STRING',
+  },
+  { 
+    title: '作者',
+    dataIndex: 'author', 
+    sortDirections: ['descend', 'ascend'],
+    type: 'STRING',
+  },
+  {
+    title: '类型',
+    dataIndex: 'type',
+    sortDirections: ['descend', 'ascend'],
+    filterMultiple: true,
+    filters: convertTagProps2TableFilterOptions(
+      variant === 'MAINDATA' ? TABLE_COL_TYPE_FILE :
+      variant === 'CONTENT' ? TABLE_COL_TYPE_TEMPLATE :
+      TABLE_COL_TYPE
+    ),
+    render: thisRenderTag,
+    exporter: thisExportTag,
+    type: 'SELECT',
+  },
+  {
+    title: '标签',
+    dataIndex: 'tags',
+    sortDirections: ['descend', 'ascend'],
+    render: renderTags,
+  },
+  {
+    title: '更新时间',
+    dataIndex: 'updated_when',
+    sortDirections: ['descend', 'ascend'],
+    type: 'DATETIME',
+    render: renderDateTime,
+  },
+  {
+    title: '创建时间',
+    dataIndex: 'created_when',
+    sortDirections: ['descend', 'ascend'],
+    type: 'DATETIME',
+    render: renderDateTime,
+  },
+</code></pre>
+<ul>
+<li>有了上述的字段定义，就可以在列表页面代码中使用：</li>
+</ul>
+<pre><code>const TABLE_ACTION_CALLBACK_DEFAULT = buildDefaultTableCallback(['模板下载', '新增', '导入', '导出', '刷新', '批量删除', '批量修改', '删除树', '重命名', /* '增节点', '清选择' */]);
+const TABLE_OPTION_CALLBACK_DEFAULT = buildDefaultTableCallback(['详情', '删除',]);
+
+const API_URL = 'contents';
+const ENTITY_NAME = 'contents';
+export function ContentsList (props: any) {
+
+  const context = useContext&#x3C;any>(ContextEntities);
+  const [detailsPayload, setDetailsPayload] = useState(null);
+
+  const { slug } = props?.match?.params || {};
+  const entity = `${ENTITY_NAME}::${slug}`;
+  const model = context[entity];
+
+  useEffect(() => {
+    if (!model) {
+      context.effect?.initial(entity, API_URL, { view: { tableViewColumns: TABLE_COLUMNS_VISIBLE }, query: QUERY_CONDITION_DEFAULT[slug] } );
+    }
+    if (!!model?.apiUrl &#x26;&#x26; !model.loaded) {
+      context.effect?.fetch(entity);
+    }
+  }, [slug, entity, model, context.effect]);
+  
+  const callback = { ...TABLE_ACTION_CALLBACK_DEFAULT };
+  const option = { ...TABLE_OPTION_CALLBACK_DEFAULT };
+  return (
+    (!model) ? &#x3C;h1>!!! Invalid Entity Name !!!&#x3C;/h1> :
+    &#x3C;>
+      &#x3C;TableSharp
+        columns={TABLE_COLUMNS} 
+        slug={slug}
+        rows={model.data} 
+        model={model}
+        context={context}
+        callback={callback}
+        option={option}
+        treeIndex={{pathFieldName: ['tree_path'], keyFieldName: 'id'}}
+        form={{
+          create: FormCreate,
+          update: FormUpdate,
+        }}
+        onDetails={(payload) => setDetailsPayload(payload)}
+      />
+
+      { slug === 'form' ? 
+        &#x3C;DetailsForm
+          slug={slug}
+          payload={detailsPayload} 
+          visible={!!detailsPayload} 
+          onClose={() => setDetailsPayload(null)} 
+        />
+        :
+        &#x3C;DetailsNotice
+          slug={slug}
+          payload={detailsPayload} 
+          visible={!!detailsPayload} 
+          onClose={() => setDetailsPayload(null)} 
+        />
+      }
+    &#x3C;/>
+  );
+};
+</code></pre>
+<blockquote>
+<p>列表页会根据用户交互，自动展示<code>详情页表单</code>、<code>新记录创建表单</code>、<code>批量更新表单</code></p>
+</blockquote>
+<ul>
+<li><code>详情页表单</code> 代码类似</li>
+</ul>
+<pre><code>export default function DetailsForm ({onClose, visible, payload, slug}) {
+  return (
+    !visible ? null : 
+    &#x3C;DetailsDrawer onClose={onClose} visible={visible} >
+      &#x3C;DetailsTabsPlus payload={payload} >
+        &#x3C;DetailsBasic    tab={'基础信息'} slug={slug} />
+        &#x3C;DetailsRichText tab={'详细说明'} />
+        &#x3C;DetailsSpec     tab={'规格参数'} />
+        &#x3C;DetailsYaml     tab={'配置信息'} />
+      &#x3C;/DetailsTabsPlus>
+    &#x3C;/DetailsDrawer>
+  );
+};
+</code></pre>
+<blockquote>
+<p>其中的 <code>DetailsBasic</code>, <code>DetailsRichText</code>, <code>DetailsSpec</code>, <code>DetailsYaml</code>, 和下面的 <code>新记录创建表单</code> 代码类似</p>
+</blockquote>
+<ul>
+<li><code>新记录创建表单</code> 代码类似</li>
+</ul>
+<pre><code>onst FORM_FIELDS: Array&#x3C;FormField> = [
+  { key: 'serial_code', label: '编码',    required: true },
+  { key: 'name',        label: '名称',    required: true },
+  { key: 'title',       label: '标题',    required: true },
+  { key: 'subtitle',    label: '副标题',  required: true },
+  { key: 'richtext',    label: '资料',                        type: 'RICHTEXT' },
+  { key: 'limit',       label: '数量限制',required: true,     type: 'NUMBER' },
+  { key: 'serial_code', label: '模版编码',required: true,     type: 'DB_SELECT', option: {
+    apiUrl: 'contents',
+    keyField: 'serial_code',
+    valueField: 'serial_code',
+    labelField: 'name',
+    queryPayload: { criteria: {
+      category: 'CT_FORM',
+    } },
+  }},
+  { key: 'comments',    label: '备注',    },
+];
+
+... 
+export const DetailsBasic: React.FC&#x3C;ISDetailsCommonProps> = ({slug, tab, details, onUpdate}) => {
+  const fields = buildFields(slug);
+  return (
+    !fields ? null :
+    &#x3C;FormPlus layout='vertical'
+      fields ={fields} 
+      initialValues={details} 
+      onSubmit={onUpdate}
+    />
+  )
+}
+</code></pre>
+<ul>
+<li><code>批量更新表单</code> 和 上述类似</li>
+</ul>
+<blockquote>
+<p>表单的输入类型支持：<code>文本</code>、<code>数字</code>、<code>固定选择项</code>、<code>动态选择项</code>（从数据库获取备选项）、<code>时间</code>、<code>日期</code>、<code>文件</code>、<code>图片</code>，等等</p>
+</blockquote></div><div class="sc-giIncl gHUUHu"><div class="sc-ezrdKe bAYFRD"><h4>管理后台</h4><h5>Chis Wei</h5><h5>admin;mvvm;view;model</h5><h5>react;context;fetch;ant design</h5><h5>实战技巧</h5></div></div></div></div><div style="background:#262626;color:#fff" class="sc-bdfBwQ cIKpxU"><div class="sc-cxFLnm izBVou"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span style="margin:0 .7em"></span><span role="img" aria-label="Email">📧</span><span>yunzhi.wei@qq.com</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈 🇨🇳  </span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210128003_weready_npm";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-b7479a33c6acc860ad47.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-4e27f748454818a5ef72.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-049ef76f24d42680e994.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-049ef76f24d42680e994.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-75088c8c7b4e843022da.js" async=""></script><script src="/app-b7479a33c6acc860ad47.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-041a771d1d9109fa1b65.js" async=""></script></body></html>
