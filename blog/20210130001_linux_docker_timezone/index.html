@@ -1,0 +1,203 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.30.3"/><title data-react-helmet="true">WeReady | Linux 服务器及容器的时区设置</title><meta data-react-helmet="true" name="keywords" content="容器;时区"/><meta data-react-helmet="true" property="wr:type" content="经验技巧"/><meta data-react-helmet="true" property="wr:title" content="Linux 服务器及容器的时区设置"/><meta data-react-helmet="true" property="wr:description" content="程序的执行，往往需要获取系统时间，如果系统时间出现问题，可能会导致程序、系统出现问题。因此，需要正确设置系统的时区和时间。"/><link as="script" rel="preload" href="/webpack-runtime-6ab8ceedddf41d9daf62.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-b7479a33c6acc860ad47.js"/><link as="script" rel="preload" href="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d8f23f3bda0add3bc409.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-79e8b458d582f6562fc9.js"/><link as="fetch" rel="preload" href="/page-data\blog\20210130001_linux_docker_timezone\page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561680736.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2718502863.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data\app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div id="__page_top__"></div><div style="position:fixed;bottom:2rem;right:2rem;z-index:999;font-size:2rem"><a href="#__page_top__"><span role="img" aria-label="Up">👍</span></a></div><div style="background:linear-gradient(90deg,#00818e,#00b8cb)" class="sc-bdfBwQ cIKpxU"><div class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div class="sc-dQppl cQZIoF container"><div class="sc-bqyKva ehfErK button"><span color="#999" class="sc-hKgILt dunqBZ"></span></div><ul class="sc-kEjbxe dHOqey menu"><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></div><div style="width:100%;display:flex;justify-content:center"><div style="width:20rem;color:#fff"><nav class="sc-gKsewC gnwqMi"><ul class="sc-iBPRYJ cOWINi"><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></nav></div></div></div></div><div style="background:#fff;padding:1em" class="sc-bdfBwQ cIKpxU"><div class="sc-lmoMRL iqbrwR"><div class="sc-iJuUWI fTbwUB"><h1>Linux 服务器及容器的时区设置</h1>
+<h2>问题描述</h2>
+<p>程序运行时，前端应用、后端服务、数据库服务、数据表字段，都有各自的时间设置，包括时间日期、时区设置，如果不匹配，有可能会造成时间判断上的错误。</p>
+<h2>背景</h2>
+<h3>数据表</h3>
+<pre><code>created_when        timestamp DEFAULT current_timestamp,
+updated_when        timestamp DEFAULT current_timestamp,
+</code></pre>
+<blockquote>
+<p>目前数据库的时间字段，采用的是 <code>timestamp</code>，是不带时区信息的时间戳。因此，字段保存的时间信息，由写入时的时间决定。字段读出的信息，就是写入时的当前时间（由当时的时间，和时区设置决定）</p>
+</blockquote>
+<h3>数据库服务器（或容器）</h3>
+<ul>
+<li>由数据库服务器的时间和单独数据库的时区设置决定</li>
+<li>通过 <code>ALTER DATABASE [database-name] SET timezone TO 'Asia/Shanghai';</code></li>
+</ul>
+<h3>服务器</h3>
+<ul>
+<li>服务器的时间，由服务器的时间和时区决定</li>
+<li>通过 <code>date</code> 命名可以查看</li>
+<li>通过 <code>cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code> 可以改变</li>
+</ul>
+<h3>容器</h3>
+<ul>
+<li>容器运行时的时间，由宿主机的时间和容器的时区决定</li>
+<li>通过 <code>date</code> 命名可以查看</li>
+<li>如果是自定义镜像，可以在 <code>Dockerfile</code> 中通过增加 <code>RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime</code> 改变镜像时区</li>
+<li>如果是标准镜像，可以通过注册表项 <code>TZ=Asia/Shanghai</code> 改变镜像时区</li>
+</ul>
+<h2>解决方案</h2>
+<h3>宿主机</h3>
+<h4>服务器时间自动定时同步更新</h4>
+<pre><code>yum install -y ntpdate
+ntpdate -u 210.72.145.44
+</code></pre>
+<h4>设置正确的时区</h4>
+<pre><code>cp /etc/localtime /etc/localtime.bak
+cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre>
+<h3>自定义容器镜像</h3>
+<h4>基于 <code>Nginx</code> 的前端镜像</h4>
+<p><code>Dockerfile</code></p>
+<pre><code>FROM nginx:1.17.6-alpine
+
+RUN cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+ADD ./runtime/nginx /etc/nginx
+ADD ./runtime/www /www
+
+... ...
+</code></pre>
+<h4>基于 <code>Nodejs</code> 的后端镜像</h4>
+<p><code>Dockerfile</code></p>
+<pre><code>FROM node:12.14.1-alpine
+
+# RUN apk update \
+#     &#x26;&#x26; apk add tzdata \
+#     &#x26;&#x26; cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+#     &#x26;&#x26; echo "Asia/Shanghai" > /etc/timezone
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories
+RUN apk add --no-cache tzdata \
+    &#x26;&#x26; ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime \
+    &#x26;&#x26; echo "Asia/Shanghai" > /etc/timezone \
+    &#x26;&#x26;rm -rf /var/cache/apk/* /tmp/* /var/tmp/* $HOME/.cache
+
+ADD ./node_modules /node_modules
+
+... ...
+</code></pre>
+<h3>标准镜像（<code>redis</code>，<code>postgres</code>）</h3>
+<p><code>docker-compose.yml</code></p>
+<pre><code>version: '2'
+
+services:
+  redis:
+    container_name: redis
+    image: 'redis:5.0.7-alpine'
+    restart: always
+    networks:
+      - bridgenet
+    ports:
+      - '6379:6379'
+    environment: 
+      - TZ=Asia/Shanghai
+
+... ...
+</code></pre>
+<h3>数据库</h3>
+<h4>服务器</h4>
+<blockquote>
+<p>确保服务器自动生成时间的正确性</p>
+</blockquote>
+<p><code>timezone.sh</code></p>
+<pre><code>psql -v ON_ERROR_STOP=1 --username postgres --dbname [database-name] &#x3C;&#x3C;-EOSQL
+  ALTER DATABASE [database-name] SET timezone TO 'Asia/Shanghai';
+EOSQL
+</code></pre>
+<p><code>docker-entrypoint-initdb.d/initial.sh</code></p>
+<pre><code>#!/bin/bash
+set -e
+
+cd /script
+sh create_db.sh
+sh create_ext.sh
+sh timezone.sh
+sh initial.sh
+
+... ...
+</code></pre>
+<h4>客户端</h4>
+<blockquote>
+<p>确保客户端执行的相关命令，所使用的时间的正确性（如果没有明确设置，缺省会使用数据库的时区设置）</p>
+</blockquote>
+<p><code>timezone.sql</code></p>
+<pre><code>show timezone;
+set timezone='Asia/Shanghai';
+select current_timestamp;
+show timezone;
+</code></pre>
+<p><code>initial.sql</code></p>
+<pre><code>\i timezone.sql;
+\i ecset.sql;
+
+... ...
+</code></pre>
+<h2>参考内容</h2>
+<h3>服务器时间同步</h3>
+<blockquote>
+<p><a href="https://www.cnblogs.com/wangwust/p/11330718.html">【Linux】- 同步网络时间</a></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="right">时间同步服务</th>
+<th>主机</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="right">中国国家授时中心</td>
+<td>210.72.145.44</td>
+</tr>
+<tr>
+<td align="right">NTP服务器(上海)</td>
+<td>ntp.api.bz</td>
+</tr>
+<tr>
+<td align="right">美国</td>
+<td>time.nist.gov</td>
+</tr>
+<tr>
+<td align="right">复旦</td>
+<td>ntp.fudan.edu.cn</td>
+</tr>
+<tr>
+<td align="right">微软公司授时主机(美国)</td>
+<td>time.windows.com</td>
+</tr>
+<tr>
+<td align="right">台警大授时中心(台湾)</td>
+<td>asia.pool.ntp.org</td>
+</tr>
+</tbody>
+</table>
+<h3>Linux CentOS</h3>
+<ul>
+<li>timedatectl</li>
+</ul>
+<pre><code># timedatectl
+</code></pre>
+<ul>
+<li>date</li>
+</ul>
+<pre><code># date
+</code></pre>
+<ul>
+<li>set timezone</li>
+</ul>
+<pre><code># cp /etc/localtime /etc/localtime.bak
+# cp /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+</code></pre>
+<h2>Postgres</h2>
+<h3>客户端</h3>
+<ul>
+<li>localtimestamp, current_timestamp, now()</li>
+</ul>
+<pre><code>select localtimestamp, current_timestamp, now();
+</code></pre>
+<ul>
+<li>show timezone</li>
+</ul>
+<pre><code>=> show timezone;
+</code></pre>
+<ul>
+<li>set timezone</li>
+</ul>
+<pre><code>=> set timezone='Asia/Shanghai';
+</code></pre>
+<blockquote>
+<p>by default the timezone is 'UTC'</p>
+</blockquote>
+<h3>服务端</h3>
+<pre><code>ALTER DATABASE [database-name] SET timezone TO 'Asia/Shanghai
+</code></pre></div><div class="sc-giIncl gHUUHu"><div class="sc-kLgntA iHaOcn"><table style="width:100%;margin-bottom:1.2em"><tr><td><h6>主题：docker</h6></td><td><h6>类别：经验技巧</h6></td></tr><tr><td><h6>更新：2021-01-30</h6></td><td><h6>创建：2021-01-30</h6></td></tr><tr><td><h6>作者：Chis Wei</h6></td></tr></table><p class="sc-bYEvPH khGBIg"><span>标签&amp;关键字：</span><span class="sc-ezrdKe bAYFRD">linux</span><span class="sc-ezrdKe bAYFRD">docker</span><span class="sc-ezrdKe bAYFRD">timezone</span><span class="sc-ezrdKe bAYFRD">postgres</span><span class="sc-ezrdKe bAYFRD">容器</span><span class="sc-ezrdKe bAYFRD">时区</span></p></div></div></div></div><div style="background:#262626;color:#fff" class="sc-bdfBwQ cIKpxU"><div class="sc-cxFLnm izBVou"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span style="margin:0 .7em"></span><span role="img" aria-label="Email">📧</span><span>yunzhi.wei@qq.com</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈 🇨🇳  </span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210130001_linux_docker_timezone";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-b7479a33c6acc860ad47.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-1332a4de0cf7d19cd489.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-79e8b458d582f6562fc9.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-79e8b458d582f6562fc9.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-d8f23f3bda0add3bc409.js" async=""></script><script src="/app-b7479a33c6acc860ad47.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-6ab8ceedddf41d9daf62.js" async=""></script></body></html>
