@@ -12,6 +12,9 @@
 <blockquote>
 <p>Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine.</p>
 </blockquote>
+<ul>
+<li><a href="watch?v=pU9Q6oiQNd0&#x26;t=18s">LearnCode.academy</a></li>
+</ul>
 <h2>nodejs 是什么</h2>
 <ul>
 <li>一个 js 运行时 （nodejs 之前的 js 代码的运行时，就是浏览器。浏览器的重要工作之一，就是执行网页上的 js 脚本。）</li>
@@ -32,4 +35,124 @@
 <ul>
 <li>非阻塞 与 回调 （同步编程 与 异步编程）</li>
 <li><code>promise</code>, <code>.then .catch</code>, <code>async &#x26; await &#x26; try catch</code></li>
-</ul></div><div class="sc-giIncl gHUUHu"><div class="sc-kLgntA iHaOcn"><table style="width:100%;margin-bottom:1.2em"><tr><td><h6>主题：nodejs</h6></td><td><h6>类别：概念理解</h6></td></tr><tr><td><h6>更新：2021-01-28</h6></td><td><h6>创建：2021-01-28</h6></td></tr><tr><td><h6>作者：Chis Wei</h6></td></tr></table><p class="sc-bYEvPH khGBIg"><span>标签&amp;关键字：</span><span class="sc-ezrdKe bAYFRD">nodejs</span><span class="sc-ezrdKe bAYFRD">fullstack</span></p></div></div></div></div><div style="background:#262626;color:#fff" class="sc-bdfBwQ cIKpxU"><div class="sc-cxFLnm izBVou"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span style="margin:0 .7em"></span><span role="img" aria-label="Email">📧</span><span>yunzhi.wei@qq.com</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈 🇨🇳  </span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210128101_1_nodejs";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-8cbc84dd4945a45f807b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-32ade9689161613dcbd1.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-50e48ee6128fbd03c781.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-50e48ee6128fbd03c781.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-e22b187e1020fe308d04.js" async=""></script><script src="/app-8cbc84dd4945a45f807b.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-25f40c26bc8052314586.js" async=""></script></body></html>
+</ul>
+<h2>动手实践</h2>
+<h3><code>node</code> 命令行互动模式</h3>
+<ul>
+<li>检查版本</li>
+</ul>
+<pre><code>> node -v
+</code></pre>
+<ul>
+<li>进入交互模式</li>
+</ul>
+<pre><code>> node
+</code></pre>
+<ul>
+<li>变量赋值</li>
+</ul>
+<pre><code>> var a=1;
+undefined
+> a
+1
+</code></pre>
+<blockquote>
+<p>You can type the above code and see the same result in chrome console, and get the same result.
+The difference is that, in chrome, the 'var a' belongs to window, and in node, the 'var a' belongs to global
+You can print the value a in chrome by 'window.a', and print the value a in node by 'global.a'.
+Similiar, you have the 'document' object in chrome and 'process' object in node.</p>
+</blockquote>
+<h3><code>module</code> 开发模式</h3>
+<ul>
+<li>新建文件 'module1.js'</li>
+</ul>
+<pre><code>console.log("hi");
+var a = 1;
+console.log(a);
+</code></pre>
+<ul>
+<li>执行命令</li>
+</ul>
+<pre><code>> node module1
+</code></pre>
+<h3><code>module</code> 间相互访问</h3>
+<ul>
+<li><code>require</code> <code>module2.js</code> from <code>module1.js</code></li>
+</ul>
+<pre><code>/**
+  module2
+*/
+var a = 1;
+module.exports.a = a;
+module.exports.b = 2;
+</code></pre>
+<pre><code>/**
+  module1
+*/
+var m2 = require('./module2');
+console.log(m2);
+</code></pre>
+<pre><code>> node module1
+</code></pre>
+<ul>
+<li>等效代码</li>
+</ul>
+<pre><code>/**
+  module2
+*/
+var a = 1;
+exports.a = a;
+exports.b = 2;
+</code></pre>
+<ul>
+<li>暴露函数</li>
+</ul>
+<pre><code>/**
+  module2
+*/
+var a = 1;
+module.exports = function() {
+  console.log('module 2!')
+};
+</code></pre>
+<pre><code>/**
+  module1
+*/
+var m2 = require('./module2');
+console.log(m2);
+m2();
+</code></pre>
+<h3><code>npm install</code></h3>
+<ul>
+<li>install</li>
+</ul>
+<pre><code>npm install underscore
+</code></pre>
+<ul>
+<li>引用</li>
+</ul>
+<pre><code>var _ = require('underscore');
+console.log(_);
+</code></pre>
+<h3><code>npm init</code> and <code>package.json</code></h3>
+<ul>
+<li><code>npm init</code></li>
+</ul>
+<blockquote>
+<p>This utility will walk you through creating a package.json file.</p>
+</blockquote>
+<ul>
+<li><code>npm install</code></li>
+</ul>
+<blockquote>
+<p>npm install will install all dependencies npm packages in package.json</p>
+</blockquote>
+<h3>http module</h3>
+<pre><code>var http = require('http');
+var server = http.createServer(function(request, response) {
+  console.log('got a request');
+  response.write('hi');
+  response.end();
+});
+server.listen(3000);
+</code></pre></div><div class="sc-giIncl gHUUHu"><div class="sc-kLgntA iHaOcn"><table style="width:100%;margin-bottom:1.2em"><tr><td><h6>主题：nodejs</h6></td><td><h6>类别：概念理解</h6></td></tr><tr><td><h6>更新：2021-01-28</h6></td><td><h6>创建：2021-01-28</h6></td></tr><tr><td><h6>作者：Chis Wei</h6></td></tr></table><p class="sc-bYEvPH khGBIg"><span>标签&amp;关键字：</span><span class="sc-ezrdKe bAYFRD">nodejs</span><span class="sc-ezrdKe bAYFRD">fullstack</span></p></div></div></div></div><div style="background:#262626;color:#fff" class="sc-bdfBwQ cIKpxU"><div class="sc-cxFLnm izBVou"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span style="margin:0 .7em"></span><span role="img" aria-label="Email">📧</span><span>yunzhi.wei@qq.com</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈 🇨🇳  </span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210128101_1_nodejs";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-8cbc84dd4945a45f807b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-32ade9689161613dcbd1.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-50e48ee6128fbd03c781.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-50e48ee6128fbd03c781.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-e22b187e1020fe308d04.js" async=""></script><script src="/app-8cbc84dd4945a45f807b.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-25f40c26bc8052314586.js" async=""></script></body></html>

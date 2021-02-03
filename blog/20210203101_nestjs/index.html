@@ -1,0 +1,51 @@
+<!DOCTYPE html><html><head><meta charSet="utf-8"/><meta http-equiv="x-ua-compatible" content="ie=edge"/><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/><meta name="generator" content="Gatsby 2.32.0"/><title data-react-helmet="true">WeReady | nestjs 101</title><meta data-react-helmet="true" name="keywords" content="后端开发;面向切面的开发"/><meta data-react-helmet="true" property="wr:type" content="概念理解"/><meta data-react-helmet="true" property="wr:title" content="nestjs 101"/><meta data-react-helmet="true" property="wr:description" content="如何利用 nodejs 的优势完成全栈开发，强烈推荐基于 nodejs 的后端开发框架：nestjs"/><link as="script" rel="preload" href="/webpack-runtime-25f40c26bc8052314586.js"/><link as="script" rel="preload" href="/framework-d585a04b7d285a7760d6.js"/><link as="script" rel="preload" href="/app-8cbc84dd4945a45f807b.js"/><link as="script" rel="preload" href="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-e22b187e1020fe308d04.js"/><link as="script" rel="preload" href="/component---src-templates-blog-js-50e48ee6128fbd03c781.js"/><link as="fetch" rel="preload" href="/page-data/blog/20210203101_nestjs/page-data.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2561680736.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/2718502863.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/sq/d/3159585216.json" crossorigin="anonymous"/><link as="fetch" rel="preload" href="/page-data/app-data.json" crossorigin="anonymous"/></head><body><div id="___gatsby"><div style="outline:none" tabindex="-1" id="gatsby-focus-wrapper"><div id="__page_top__"></div><div style="position:fixed;bottom:2rem;right:2rem;z-index:999;font-size:2rem"><a href="#__page_top__"><span role="img" aria-label="Up">👍</span></a></div><div style="background:linear-gradient(90deg,#00818e,#00b8cb)" class="sc-bdfBwQ cIKpxU"><div class="sc-gsTCUz sc-dlfnbm bhdLno bcaJjD"><div class="sc-dQppl cQZIoF container"><div class="sc-bqyKva ehfErK button"><span color="#999" class="sc-hKgILt dunqBZ"></span></div><ul class="sc-kEjbxe dHOqey menu"><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-crrsfI iDhzRL"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></div><div style="width:100%;display:flex;justify-content:center"><div style="width:20rem;color:#fff"><nav class="sc-gKsewC gnwqMi"><ul class="sc-iBPRYJ cOWINi"><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/"><span>首页</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/storybook.html"><span>演示</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/service"><span>服务</span></a></li><li class="sc-pFZIQ gbgfMs"><a style="width:100%;display:flex;justify-content:space-between" href="/member"><span>会员</span></a></li></ul></nav></div></div></div></div><div style="background:#fff;padding:1em" class="sc-bdfBwQ cIKpxU"><div class="sc-lmoMRL iqbrwR"><div class="sc-iJuUWI fTbwUB"><h1>nestjs 101</h1>
+<h2>参考资料</h2>
+<ul>
+<li><a href="https://www.jianshu.com/p/f0a4944e8fb9">让我们用Nestjs来重写一个CNode</a></li>
+</ul>
+<h2>概念</h2>
+<ul>
+<li>核心组件</li>
+</ul>
+<blockquote>
+<p>NestJs 主要有 8 个组件（Controller 控制器、Component 组件、Module 模块、Middlewares 中间件、Exception Filters 异常过滤器、Pipes 管道、Guards 守卫、Interceptors 拦截器）
+Component 是 NestJs Ver 4.5 的称呼，5.0 之后成为 Provider</p>
+</blockquote>
+<ul>
+<li>不同角色在请求过程中的执行顺序</li>
+</ul>
+<blockquote>
+<p>客户端请求 ---> 中间件 ---> 守卫 ---> 拦截器之前 ---> 管道 ---> 控制器处理并响应 ---> 拦截器之后 ---> 过滤器</p>
+</blockquote>
+<ul>
+<li>
+<p>不同角色的特点</p>
+<ul>
+<li>功能</li>
+<li>中间件    ：访问 请求（req） 和 响应（res） 对象，并调用下一个 中间件（next）</li>
+<li>过滤器    ：处理所有抛出的异常</li>
+<li>管道      ：对请求参数做变形（纯函数）</li>
+<li>守卫      ：做权限认证</li>
+<li>拦截器    ：特殊功能，类似于AOP面向切面编程，</li>
+<li>实现方式</li>
+<li>中间件    ：由 @Injectable() 装饰的类 | 函数</li>
+<li>过滤器    ：</li>
+<li>管道      ：用@Injectable()装饰器注释的类</li>
+<li>守卫      ：用@Injectable()装饰器注释的类</li>
+<li>拦截器    ：用@Injectable()装饰器注释的类</li>
+<li>实现为类时，所需实现的接口</li>
+<li>中间件    ：NestMiddleware</li>
+<li>过滤器    ：ExceptionFilter </li>
+<li>管道      ：PipeTransform</li>
+<li>守卫      ：CanActivate</li>
+<li>拦截器    ：NestInterceptor </li>
+<li>使用方式</li>
+<li>中间件    ：全局注册（app.use）               | 模块注册（config(consumer) { consumer.apply().with().exclude().forRoutes()）</li>
+<li>过滤器    ：全局注册（app.useGlobalFilters）  | 装饰器（@UseFilters）装饰控制器   | 装饰器（@UseFilters）装饰路由</li>
+<li>管道      ：全局注册（app.useGlobalPipes）    | 作用于当前控制器（@UsePipes)      | 作用于当前路由（@UsePipes)        | 作用于当前的 Body（@Body）</li>
+<li>守卫      ：全局注册（app.useGlobalGuards）   | 作用于当前控制器（@UseGuards) </li>
+<li>拦截器    ：全局注册（app.useGlobalInterceptors）   | 作用于当前控制器（@UseInterceptors)  | 作用于当前路由（@UseInterceptors) </li>
+</ul>
+</li>
+<li>不同角色所需实现的接口</li>
+</ul></div><div class="sc-giIncl gHUUHu"><div class="sc-kLgntA iHaOcn"><table style="width:100%;margin-bottom:1.2em"><tr><td><h6>主题：fullstack</h6></td><td><h6>类别：概念理解</h6></td></tr><tr><td><h6>更新：2021-02-03</h6></td><td><h6>创建：2021-02-03</h6></td></tr><tr><td><h6>作者：Chis Wei</h6></td></tr></table><p class="sc-bYEvPH khGBIg"><span>标签&amp;关键字：</span><span class="sc-ezrdKe bAYFRD">fullstack</span><span class="sc-ezrdKe bAYFRD">nodejs</span><span class="sc-ezrdKe bAYFRD">nestjs</span><span class="sc-ezrdKe bAYFRD">后端开发</span><span class="sc-ezrdKe bAYFRD">面向切面的开发</span></p></div></div></div></div><div style="background:#262626;color:#fff" class="sc-bdfBwQ cIKpxU"><div class="sc-cxFLnm izBVou"><span>© 2021 WeReady. All rights reserved.</span><div><span role="img" aria-label="Phone">☎️</span><span>18621569380</span><span style="margin:0 .7em"></span><span role="img" aria-label="Email">📧</span><span>yunzhi.wei@qq.com</span></div><span role="img" aria-label="Goodness">✨ 🍺 🏠 ☕ 🌈 🇨🇳  </span></div></div></div><div id="gatsby-announcer" style="position:absolute;top:0;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0, 0, 0, 0);white-space:nowrap;border:0" aria-live="assertive" aria-atomic="true"></div></div><script id="gatsby-script-loader">/*<![CDATA[*/window.pagePath="/blog/20210203101_nestjs";/*]]>*/</script><script id="gatsby-chunk-mapping">/*<![CDATA[*/window.___chunkMapping={"polyfill":["/polyfill-e4ff66ed5ec0b4bd2598.js"],"app":["/app-8cbc84dd4945a45f807b.js"],"component---src-pages-404-js":["/component---src-pages-404-js-43f7b594bb7a664c42c9.js"],"component---src-pages-index-js":["/component---src-pages-index-js-32ade9689161613dcbd1.js"],"component---src-templates-blog-js":["/component---src-templates-blog-js-50e48ee6128fbd03c781.js"]};/*]]>*/</script><script src="/polyfill-e4ff66ed5ec0b4bd2598.js" nomodule=""></script><script src="/component---src-templates-blog-js-50e48ee6128fbd03c781.js" async=""></script><script src="/bacebdf6d0bf517fa17dd17cb191a4a547a45f91-e22b187e1020fe308d04.js" async=""></script><script src="/app-8cbc84dd4945a45f807b.js" async=""></script><script src="/framework-d585a04b7d285a7760d6.js" async=""></script><script src="/webpack-runtime-25f40c26bc8052314586.js" async=""></script></body></html>
