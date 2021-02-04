@@ -3,6 +3,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Inter:400,80,900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
 * {
   margin: 0;
   padding: 0;
@@ -107,6 +108,17 @@ button + button {
   margin-left: 10px;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  font-size: 16px;
+}
+
 section {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -200,4 +212,4 @@ body {
 }
 
 
-/*# sourceMappingURL=main.73c8753b.chunk.css.map*/
+/*# sourceMappingURL=main.68243eb9.chunk.css.map*/
