@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Inter:400,80,900&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans&display=swap);
 @import url(https://fonts.googleapis.com/css2?family=Poppins:200,300,400,500,600,700,800,900&display=swap);
@@ -55,6 +56,18 @@ html {
 .storybook-button--large {
   font-size: 16px;
   padding: 12px 24px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+body {
+  background: rgb(19,19,19);
+  color: #fff;
 }
 
 * {
@@ -212,4 +225,4 @@ body {
 }
 
 
-/*# sourceMappingURL=main.c24acbc8.chunk.css.map*/
+/*# sourceMappingURL=main.1d985c79.chunk.css.map*/
