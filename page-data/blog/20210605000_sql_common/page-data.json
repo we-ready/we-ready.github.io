@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-js",
     "path": "/blog/20210605000_sql_common",
     "result": {"pageContext":{"frontmatter":{"id":"20210605000_sql_common","title":"常用 SQL 语句","subtitle":null,"subject":"运营数据报表","author":"Chris Wei","keywords":null,"tags":"sql","category":"经验技巧","cover":"https://media.inkscape.org/media/resources/file/Ladybug-icon.png","created_when":"2021-06-05","updated_when":"2021-06-05","level":200},"excerpt":"# 常用 SQL 语句\n\n# 时间过滤 (mysql)\n","html":"<h1>常用 SQL 语句</h1>\n<h2>时间过滤 (mysql)</h2>\n<h4>今天的数据</h4>\n<pre><code>SELECT * FROM 表名 WHERE to_days(时间字段) = to_days(now());\n</code></pre>\n<h4>昨天的数据</h4>\n<pre><code>SELECT * FROM 表名 WHERE to_days(now()) - to_days(时间字段) &#x3C;= 1;\n</code></pre>\n<h4>近7天的数据</h4>\n<pre><code>SELECT * FROM 表名 WHERE date_sub(curdate(), interval 7 day) &#x3C;= date(时间字段);\n</code></pre>"}},
-    "staticQueryHashes": ["1280648994","3159585216"]}
+    "staticQueryHashes": ["1280648994","1652604844","3159585216"]}

@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkBlog1=self.webpackChunkBlog1||[]).push([[552],{6525:function(e,n,t){t.r(n),t.d(n,{default:function(){return r}});var u=t(5651),l=t(7294);function r(){return l.createElement(u.b$,null,l.createElement("h1",null,"Hooks"))}}}]);
+//# sourceMappingURL=component---src-pages-hook-index-tsx-6517b681b606ffffa285.js.map

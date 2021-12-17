@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-js",
     "path": "/blog/20210526000_regular_expression",
     "result": {"pageContext":{"frontmatter":{"id":"20210526000_regular_expression","title":"正则表达式","subtitle":"必定会遇到的问题","subject":"正则","author":"Chris Wei","keywords":"reg","tags":null,"category":"语法","cover":"https://pics5.baidu.com/feed/810a19d8bc3eb135d2f5cde4767d06d5fd1f442d.jpeg?token=91bf7733abeb38dba787a704086450ea","created_when":"2021-05-26","updated_when":"2021-05-26","level":100},"excerpt":"# 正则表达式常规功能\n\n# JS 中的字符串去掉特殊字符\n","html":"<h1>正则表达式常规功能</h1>\n<h2>JS 中的字符串去掉特殊字符</h2>\n<pre><code>const text = '1\"2`3%4*5&#x26;6$7+8-9~0.a?b/c(d)e[f]g{h}='\nconst res = text.replace(/[~!@#$%^&#x26;*_+=?(){}\\[\\]\\-\\.\\'\\\"\\\\\\/\\b\\`\\f\\n\\r\\t]/g, '');\nconsole.log(text, res)\n</code></pre>"}},
-    "staticQueryHashes": ["1280648994","3159585216"]}
+    "staticQueryHashes": ["1280648994","1652604844","3159585216"]}

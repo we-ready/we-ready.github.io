@@ -2,4 +2,4 @@
     "componentChunkName": "component---src-templates-blog-js",
     "path": "/blog/20210519000_browserstack",
     "result": {"pageContext":{"frontmatter":{"id":"20210519000_browserstack","title":"利用 browserstack 体验营业再真实移动设备的执行效果","subtitle":null,"subject":"tools","author":"Chris Wei","keywords":"browserstack","tags":null,"category":"精选推荐","cover":"https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/wp-content/uploads/2019/11/browserstack.svg","created_when":"2021-05-19","updated_when":"2021-05-19","level":100},"excerpt":"# 利用 browserstack 体验营…\n","html":"<h1>利用 browserstack 体验营业再真实移动设备的执行效果</h1>\n<h4>文档</h4>\n<p><a href=\"https://www.browserstack.com/docs/app-automate/xcuitest/getting-started\">Guide</a></p>"}},
-    "staticQueryHashes": ["1280648994","3159585216"]}
+    "staticQueryHashes": ["1280648994","1652604844","3159585216"]}
