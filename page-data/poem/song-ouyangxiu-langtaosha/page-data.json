@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-ouyangxiu-langtaosha",
+    "result": {"pageContext":{"frontmatter":{"id":"song-ouyangxiu-langtaosha","title":"浪淘沙","subtitle":null,"subject":"浪淘沙","authors":"欧阳修","keywords":null,"tags":"宋词","category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    把酒祝东风，且共从容。\n    垂杨紫陌洛城东，总是当时携手处，游遍芳丛。\n    时光如川浪淘沙，青史留名多俊才，今年花胜去年红。\n    可惜明年花更好，知与谁同？\n","html":"<pre><code>把酒祝东风，且共从容。\n垂杨紫陌洛城东，总是当时携手处，游遍芳丛。\n时光如川浪淘沙，青史留名多俊才，今年花胜去年红。\n可惜明年花更好，知与谁同？\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

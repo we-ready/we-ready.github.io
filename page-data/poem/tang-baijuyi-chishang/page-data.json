@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-baijuyi-chishang",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-baijuyi-chishang","title":"池上","subtitle":null,"subject":null,"authors":"白居易","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    小娃撑小艇，偷采白莲回。\n    不解藏踪迹，浮萍一道开。\n","html":"<pre><code>小娃撑小艇，偷采白莲回。\n不解藏踪迹，浮萍一道开。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

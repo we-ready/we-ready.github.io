@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-fanzhongyan-jiangshangyuzhe",
+    "result": {"pageContext":{"frontmatter":{"id":"song-fanzhongyan-jiangshangyuzhe","title":"江上渔者","subtitle":null,"subject":null,"authors":"范仲淹","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    江上往来人，但爱鲈鱼美。\n    君看一叶舟，出没风波里。\n","html":"<pre><code>江上往来人，但爱鲈鱼美。\n君看一叶舟，出没风波里。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

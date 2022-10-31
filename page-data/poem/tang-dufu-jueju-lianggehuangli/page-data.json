@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-jueju-lianggehuangli",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-jueju-lianggehuangli","title":"绝句·两个黄鹂","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    两个黄鹂鸣翠柳，一行白鹭上青天\n    传含西岭千秋雪，门泊东吴万里船\n","html":"<pre><code>两个黄鹂鸣翠柳，一行白鹭上青天\n传含西岭千秋雪，门泊东吴万里船\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

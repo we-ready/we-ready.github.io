@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangwei-niaomingjian",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangwei-niaomingjian","title":"鸟鸣涧","subtitle":null,"subject":null,"authors":"王维","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    人闲桂花落，夜静春山空。\n    月出惊山鸟，时鸣春涧中。\n","html":"<pre><code>人闲桂花落，夜静春山空。\n月出惊山鸟，时鸣春涧中。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

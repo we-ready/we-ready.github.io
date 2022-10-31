@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangchangling-cailianqu",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangchangling-cailianqu","title":"采莲曲","subtitle":null,"subject":null,"authors":"王昌龄","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    荷叶罗裙一色裁，芙蓉向脸两边开。\n    乱入池中看不见，闻歌始觉有人来。\n","html":"<pre><code>荷叶罗裙一色裁，芙蓉向脸两边开。\n乱入池中看不见，闻歌始觉有人来。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

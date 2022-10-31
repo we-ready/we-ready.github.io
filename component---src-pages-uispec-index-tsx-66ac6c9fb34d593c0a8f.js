@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkBlog1=self.webpackChunkBlog1||[]).push([[397],{5510:function(e,n,t){t.r(n),t.d(n,{default:function(){return c}});var u=t(7294),l=t(3834);function c(){return u.createElement(l.xb,null,u.createElement("h1",null,"UI Spec"))}}}]);
+//# sourceMappingURL=component---src-pages-uispec-index-tsx-66ac6c9fb34d593c0a8f.js.map

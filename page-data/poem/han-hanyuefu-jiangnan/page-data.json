@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/han-hanyuefu-jiangnan",
+    "result": {"pageContext":{"frontmatter":{"id":"han-hanyuefu-jiangnan","title":"江南","subtitle":null,"subject":null,"authors":"汉乐府","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"汉朝","updated_when":null,"level":null},"excerpt":"    江南可采莲，莲叶何田田。\n    鱼戏莲叶间，\n    鱼戏莲叶东，\n    鱼戏莲叶西，\n    鱼戏莲叶南，\n    鱼戏莲叶北，\n","html":"<pre><code>江南可采莲，莲叶何田田。\n鱼戏莲叶间，\n鱼戏莲叶东，\n鱼戏莲叶西，\n鱼戏莲叶南，\n鱼戏莲叶北，\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

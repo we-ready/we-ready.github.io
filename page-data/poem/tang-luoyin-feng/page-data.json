@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-luoyin-feng",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-luoyin-feng","title":"蜂","subtitle":null,"subject":null,"authors":"罗隐","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    不论平地与山尖，无限风光尽被占。\n    采得百花成蜜后，为谁辛苦为谁甜？\n","html":"<pre><code>不论平地与山尖，无限风光尽被占。\n采得百花成蜜后，为谁辛苦为谁甜？\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

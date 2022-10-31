@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wangjian-shiwuyewangyuejidulangzhong",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wangjian-shiwuyewangyuejidulangzhong","title":"十五夜望月寄杜郎中","subtitle":null,"subject":null,"authors":"王建","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    中庭地白树栖鸦，冷露无声湿桂花。\n    今夜月明人尽望，不知秋思落谁家。\n","html":"<pre><code>中庭地白树栖鸦，冷露无声湿桂花。\n今夜月明人尽望，不知秋思落谁家。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

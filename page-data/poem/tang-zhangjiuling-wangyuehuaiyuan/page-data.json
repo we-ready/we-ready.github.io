@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-zhangjiuling-wangyuehuaiyuan",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-zhangjiuling-wangyuehuaiyuan","title":"望月怀远","subtitle":null,"subject":null,"authors":"张九龄","keywords":null,"tags":"中秋","category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    海上生明月，天涯共此时。\n    情人怨遥夜，竟夕起相思。\n    灭烛怜光满，披衣觉露滋。\n    不堪盈手赠，还寝梦佳期。\n","html":"<pre><code>海上生明月，天涯共此时。\n情人怨遥夜，竟夕起相思。\n灭烛怜光满，披衣觉露滋。\n不堪盈手赠，还寝梦佳期。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

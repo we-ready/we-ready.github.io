@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-lishangyin-change",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-lishangyin-change","title":"嫦娥","subtitle":null,"subject":null,"authors":"李商隐","keywords":null,"tags":"中秋;嫦娥","category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    云母屏风烛影深，长河渐落晓星沉。\n    嫦娥应悔偷灵药，碧海青天夜夜心。\n","html":"<pre><code>云母屏风烛影深，长河渐落晓星沉。\n嫦娥应悔偷灵药，碧海青天夜夜心。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

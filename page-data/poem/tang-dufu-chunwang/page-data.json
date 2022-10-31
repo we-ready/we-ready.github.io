@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-chunwang",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-chunwang","title":"春望","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    国破山河在，城春草木深。\n    感时花溅泪，恨别鸟惊心。\n    烽火连三月，家书抵万金。\n    白头搔更短，浑欲不胜簪。\n","html":"<pre><code>国破山河在，城春草木深。\n感时花溅泪，恨别鸟惊心。\n烽火连三月，家书抵万金。\n白头搔更短，浑欲不胜簪。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

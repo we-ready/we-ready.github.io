@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangwei-xiangsi",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangwei-xiangsi","title":"相思","subtitle":null,"subject":null,"authors":"王维","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    红豆生南国，春来发几枝。\n    愿君多采撷，此物最相思。\n","html":"<pre><code>红豆生南国，春来发几枝。\n愿君多采撷，此物最相思。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

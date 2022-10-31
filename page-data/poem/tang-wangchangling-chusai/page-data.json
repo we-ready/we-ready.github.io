@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangchangling-chusai",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangchangling-chusai","title":"出塞二首·其一","subtitle":null,"subject":null,"authors":"王昌龄","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    秦时明月汉时关，万里长征人未还。\n    但使龙城飞将在，不教胡马度阴山。\n","html":"<pre><code>秦时明月汉时关，万里长征人未还。\n但使龙城飞将在，不教胡马度阴山。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

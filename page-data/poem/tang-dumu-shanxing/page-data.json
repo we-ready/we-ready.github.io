@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dumu-shanxing",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dumu-shanxing","title":"山行","subtitle":null,"subject":null,"authors":"杜牧","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    远上寒山石径斜,白云生处有人家。\n    停车坐爱枫林晚,霜叶红于二月花。\n","html":"<pre><code>远上寒山石径斜,白云生处有人家。\n停车坐爱枫林晚,霜叶红于二月花。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

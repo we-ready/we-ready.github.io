@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/jinxiandai-zangkejia-laohuangniu",
+    "result": {"pageContext":{"frontmatter":{"id":"jinxiandai-zangkejia-laohuangniu","title":"老黄牛","subtitle":null,"subject":null,"authors":"臧克家","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"近现代","updated_when":null,"level":null},"excerpt":"    块块荒田水和泥，深翻细作走东西。\n    老牛亦解韶光贵，不待扬鞭自奋蹄。\n","html":"<pre><code>块块荒田水和泥，深翻细作走东西。\n老牛亦解韶光贵，不待扬鞭自奋蹄。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

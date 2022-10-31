@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-lishangyin-daizeng-1",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-lishangyin-daizeng-1","title":"代赠二首·其一","subtitle":null,"subject":null,"authors":"李商隐","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    楼上黄昏欲望休，玉梯横绝月如钩。\n    芭蕉不展丁香结，同向春风各自愁。\n","html":"<pre><code>楼上黄昏欲望休，玉梯横绝月如钩。\n芭蕉不展丁香结，同向春风各自愁。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

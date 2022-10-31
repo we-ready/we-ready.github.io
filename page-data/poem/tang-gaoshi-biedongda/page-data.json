@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-gaoshi-biedongda",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-gaoshi-biedongda","title":"别董大二首","subtitle":null,"subject":null,"authors":"高适","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    千里黄云白日曛，北风吹雁雪纷纷。\n    莫愁前路无知己，天下谁人不识君？\n    六翮飘飖私自怜，一离京洛十余年。\n    丈夫贫贱应未足，今日相逢无酒钱。\n","html":"<pre><code>千里黄云白日曛，北风吹雁雪纷纷。\n莫愁前路无知己，天下谁人不识君？\n六翮飘飖私自怜，一离京洛十余年。\n丈夫贫贱应未足，今日相逢无酒钱。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

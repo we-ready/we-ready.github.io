@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/qing-gaoding-cunju",
+    "result": {"pageContext":{"frontmatter":{"id":"qing-gaoding-cunju","title":"村居","subtitle":null,"subject":null,"authors":"高鼎","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"清朝","updated_when":null,"level":null},"excerpt":"    草长莺飞二月天，拂堤杨柳醉春烟。\n    儿童散学归来早，忙趁东风放纸鸢。\n","html":"<pre><code>草长莺飞二月天，拂堤杨柳醉春烟。\n儿童散学归来早，忙趁东风放纸鸢。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

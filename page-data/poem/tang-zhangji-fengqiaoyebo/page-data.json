@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-zhangji-fengqiaoyebo",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-zhangji-fengqiaoyebo","title":"枫桥夜泊","subtitle":null,"subject":null,"authors":"张继","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    月落乌啼霜满天，江枫渔火对愁眠。\n    姑苏城外寒山寺，夜半钟声到客船。\n","html":"<pre><code>月落乌啼霜满天，江枫渔火对愁眠。\n姑苏城外寒山寺，夜半钟声到客船。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

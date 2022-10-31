@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-weiyingwu-chuzhouxijian",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-weiyingwu-chuzhouxijian","title":"滁州西涧","subtitle":null,"subject":null,"authors":"韦应物","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    独怜幽草涧边生，上有黄鹂深树鸣。\n    春潮带雨晚来急，野渡无人舟自横。\n","html":"<pre><code>独怜幽草涧边生，上有黄鹂深树鸣。\n春潮带雨晚来急，野渡无人舟自横。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

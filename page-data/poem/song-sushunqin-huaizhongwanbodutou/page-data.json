@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-sushunqin-huaizhongwanbodutou",
+    "result": {"pageContext":{"frontmatter":{"id":"song-sushunqin-huaizhongwanbodutou","title":"淮中晚泊犊头","subtitle":null,"subject":null,"authors":"苏舜钦","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    春阴垂野草青青，时有幽花一树明。\n    晚泊孤舟古祠下，满川风雨看潮生。\n","html":"<pre><code>春阴垂野草青青，时有幽花一树明。\n晚泊孤舟古祠下，满川风雨看潮生。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

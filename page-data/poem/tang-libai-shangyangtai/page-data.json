@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-libai-shangyangtai",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-libai-shangyangtai","title":"上阳台","subtitle":null,"subject":null,"authors":"李白","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    山高水长，物象千万，\n    非有老笔，清壮可穷。\n","html":"<pre><code>山高水长，物象千万，\n非有老笔，清壮可穷。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

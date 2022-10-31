@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-chenziang-dengyouzhoutaige",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-chenziang-dengyouzhoutaige","title":"登幽州台歌","subtitle":null,"subject":null,"authors":"陈子昂","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    前不见古人，后不见来者。\n    念天地之悠悠，独怆然而涕下！\n","html":"<pre><code>前不见古人，后不见来者。\n念天地之悠悠，独怆然而涕下！\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

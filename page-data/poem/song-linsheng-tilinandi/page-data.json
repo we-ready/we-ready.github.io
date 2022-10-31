@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-linsheng-tilinandi",
+    "result": {"pageContext":{"frontmatter":{"id":"song-linsheng-tilinandi","title":"题临安邸","subtitle":null,"subject":null,"authors":"林升","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    山外青山楼外楼，西湖歌舞几时休？\n    暖风熏得游人醉，直把杭州作汴州。\n","html":"<pre><code>山外青山楼外楼，西湖歌舞几时休？\n暖风熏得游人醉，直把杭州作汴州。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

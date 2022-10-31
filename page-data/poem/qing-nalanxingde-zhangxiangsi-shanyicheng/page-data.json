@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/qing-nalanxingde-zhangxiangsi-shanyicheng",
+    "result": {"pageContext":{"frontmatter":{"id":"qing-nalanxingde-zhangxiangsi-shanyicheng","title":"长相思·山一程","subtitle":null,"subject":"长相思","authors":"纳兰性德","keywords":null,"tags":"宋词","category":"诗词歌赋","cover":null,"videos":null,"created_when":"清朝","updated_when":null,"level":null},"excerpt":"    山一程，水一程，身向榆关那畔行，夜深千帐灯。\n    风一更，雪一更，聒碎乡心梦不成，故园无此声。\n","html":"<pre><code>山一程，水一程，身向榆关那畔行，夜深千帐灯。\n风一更，雪一更，聒碎乡心梦不成，故园无此声。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

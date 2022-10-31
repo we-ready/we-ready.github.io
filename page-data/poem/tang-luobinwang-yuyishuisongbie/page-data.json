@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-luobinwang-yuyishuisongbie",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-luobinwang-yuyishuisongbie","title":"于易水送别","subtitle":null,"subject":null,"authors":"骆宾王","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    此地别燕丹，壮士发冲冠。\n    昔时人已没，今日水犹寒。\n","html":"<pre><code>此地别燕丹，壮士发冲冠。\n昔时人已没，今日水犹寒。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wangyucheng-cunxing",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wangyucheng-cunxing","title":"村行","subtitle":null,"subject":null,"authors":"王禹偁","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    马穿山径菊初黄，信马悠悠野兴长。\n    万壑有声含晚籁，数峰无语立斜阳。\n    棠梨叶落胭脂色，荞麦花开白雪香。\n    何事吟余忽惆怅，村桥原树似吾乡。\n","html":"<pre><code>马穿山径菊初黄，信马悠悠野兴长。\n万壑有声含晚籁，数峰无语立斜阳。\n棠梨叶落胭脂色，荞麦花开白雪香。\n何事吟余忽惆怅，村桥原树似吾乡。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

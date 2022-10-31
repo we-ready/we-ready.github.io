@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-chunyexiyu",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-chunyexiyu","title":"春夜喜雨","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    好雨知时节，当春乃发生。\n    随风潜入夜，润物细无声。\n    野径云俱黑，江船火独明。\n    晓看红湿处，花重锦官城。（成都）\n","html":"<pre><code>好雨知时节，当春乃发生。\n随风潜入夜，润物细无声。\n野径云俱黑，江船火独明。\n晓看红湿处，花重锦官城。（成都）\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

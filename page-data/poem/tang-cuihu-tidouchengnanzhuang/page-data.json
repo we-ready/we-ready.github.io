@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-cuihu-tidouchengnanzhuang",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-cuihu-tidouchengnanzhuang","title":"题都城南庄","subtitle":null,"subject":null,"authors":"崔护","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    去年今日此门中，人面桃花相映红。\n    人面不知何处去，桃花依旧笑春风。\n","html":"<pre><code>去年今日此门中，人面桃花相映红。\n人面不知何处去，桃花依旧笑春风。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

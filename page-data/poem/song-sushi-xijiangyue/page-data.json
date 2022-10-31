@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-sushi-xijiangyue",
+    "result": {"pageContext":{"frontmatter":{"id":"song-sushi-xijiangyue","title":"西江月","subtitle":null,"subject":"西江月","authors":"苏轼","keywords":null,"tags":"中秋","category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    世事一场大梦，人生几度秋凉？\n    夜来风叶已鸣廊。看取眉头鬓上。\n    酒贱常愁客少，月明多被云妨。\n    中秋谁与共孤光。把盏凄然北望。\n    月是故乡明，人是家乡亲。\n","html":"<pre><code>世事一场大梦，人生几度秋凉？\n夜来风叶已鸣廊。看取眉头鬓上。\n酒贱常愁客少，月明多被云妨。\n中秋谁与共孤光。把盏凄然北望。\n月是故乡明，人是家乡亲。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

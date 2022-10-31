@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wengjuan-xiangcunsiyue",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wengjuan-xiangcunsiyue","title":"乡村四月","subtitle":null,"subject":null,"authors":"翁卷","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    绿遍山原白满川，子规声里雨如烟。\n    乡村四月闲人少，才了蚕桑又插田。\n","html":"<pre><code>绿遍山原白满川，子规声里雨如烟。\n乡村四月闲人少，才了蚕桑又插田。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

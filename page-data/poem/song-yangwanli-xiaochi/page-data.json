@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-yangwanli-xiaochi",
+    "result": {"pageContext":{"frontmatter":{"id":"song-yangwanli-xiaochi","title":"小池","subtitle":null,"subject":null,"authors":"杨万里","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    泉眼无声惜细流，树阴照水爱晴柔。\n    小荷才露尖尖角，早有蜻蜓立上头。\n","html":"<pre><code>泉眼无声惜细流，树阴照水爱晴柔。\n小荷才露尖尖角，早有蜻蜓立上头。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

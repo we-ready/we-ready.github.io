@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/chunqiu-shijing-caiwei",
+    "result": {"pageContext":{"frontmatter":{"id":"chunqiu-shijing-caiwei","title":"采薇","subtitle":null,"subject":"诗经","authors":"诗经","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"春秋","updated_when":null,"level":null},"excerpt":"    昔我往矣，杨柳依依。今我来思，雨雪霏霏。\n    行道迟迟，载渴载饥。我心伤悲，莫知我哀！\n","html":"<pre><code>昔我往矣，杨柳依依。今我来思，雨雪霏霏。\n行道迟迟，载渴载饥。我心伤悲，莫知我哀！\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

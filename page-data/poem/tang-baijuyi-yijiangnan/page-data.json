@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-baijuyi-yijiangnan",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-baijuyi-yijiangnan","title":"忆江南","subtitle":null,"subject":"忆江南","authors":"白居易","keywords":null,"tags":"宋词","category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    江南好，风景旧曾谙。\n    日出江花红胜火，春来江水绿如蓝。能不忆江南？\n","html":"<pre><code>江南好，风景旧曾谙。\n日出江花红胜火，春来江水绿如蓝。能不忆江南？\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

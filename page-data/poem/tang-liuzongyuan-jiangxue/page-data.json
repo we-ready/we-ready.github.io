@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-liuzongyuan-jiangxue",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-liuzongyuan-jiangxue","title":"江雪","subtitle":null,"subject":null,"authors":"柳宗元","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    千山鸟飞绝，万径人踪灭。\n    孤舟蓑笠翁，独钓寒江雪。\n","html":"<pre><code>千山鸟飞绝，万径人踪灭。\n孤舟蓑笠翁，独钓寒江雪。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-leizhen-cunwan",
+    "result": {"pageContext":{"frontmatter":{"id":"song-leizhen-cunwan","title":"村晚","subtitle":null,"subject":null,"authors":"雷震","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    草满池塘水满陂，山衔落日浸寒漪。\n    牧童归去横牛背，短笛无腔信口吹。\n","html":"<pre><code>草满池塘水满陂，山衔落日浸寒漪。\n牧童归去横牛背，短笛无腔信口吹。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

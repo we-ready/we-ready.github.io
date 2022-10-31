@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-liuyuxi-wangdongting",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-liuyuxi-wangdongting","title":"望洞庭","subtitle":null,"subject":null,"authors":"刘禹锡","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    湖光秋月两相和,潭面无风镜未磨。\n    遥望洞庭山水翠,白银盘里一青螺。\n","html":"<pre><code>湖光秋月两相和,潭面无风镜未磨。\n遥望洞庭山水翠,白银盘里一青螺。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

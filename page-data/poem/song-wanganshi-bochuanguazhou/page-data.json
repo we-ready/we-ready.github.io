@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wanganshi-bochuanguazhou",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wanganshi-bochuanguazhou","title":"泊船瓜洲","subtitle":null,"subject":null,"authors":"王安石","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    京口瓜洲一水间，钟山只隔数重山。\n    春风又绿江南岸，明月何时照我还？\n","html":"<pre><code>京口瓜洲一水间，钟山只隔数重山。\n春风又绿江南岸，明月何时照我还？\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

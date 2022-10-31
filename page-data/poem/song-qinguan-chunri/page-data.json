@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-qinguan-chunri",
+    "result": {"pageContext":{"frontmatter":{"id":"song-qinguan-chunri","title":"春日","subtitle":null,"subject":null,"authors":"秦观","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    一夕轻雷落万丝，霁光浮瓦碧参差。\n    有情芍药含春泪，无力蔷薇卧晓枝。\n","html":"<pre><code>一夕轻雷落万丝，霁光浮瓦碧参差。\n有情芍药含春泪，无力蔷薇卧晓枝。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-zhangzhihe-yugezi",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-zhangzhihe-yugezi","title":"渔歌子","subtitle":null,"subject":null,"authors":"张志和","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    西塞山前白鹭飞，桃花流水鳜鱼肥。\n    青箬笠，绿蓑衣，斜风细雨不须归。\n","html":"<pre><code>西塞山前白鹭飞，桃花流水鳜鱼肥。\n青箬笠，绿蓑衣，斜风细雨不须归。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-yeshaoweng-youyuanbuzhi",
+    "result": {"pageContext":{"frontmatter":{"id":"song-yeshaoweng-youyuanbuzhi","title":"游园不值","subtitle":null,"subject":null,"authors":"叶绍翁","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    应怜屐齿印苍苔，小扣柴扉久不开。\n    春色满园关不住，一枝红杏出墙来。\n","html":"<pre><code>应怜屐齿印苍苔，小扣柴扉久不开。\n春色满园关不住，一枝红杏出墙来。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

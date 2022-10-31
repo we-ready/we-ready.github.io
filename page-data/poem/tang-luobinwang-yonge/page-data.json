@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-luobinwang-yonge",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-luobinwang-yonge","title":"咏鹅","subtitle":null,"subject":null,"authors":"骆宾王","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    鹅，鹅，鹅，曲项向天歌；\n    白毛浮绿水，红掌拨清波。\n","html":"<pre><code>鹅，鹅，鹅，曲项向天歌；\n白毛浮绿水，红掌拨清波。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

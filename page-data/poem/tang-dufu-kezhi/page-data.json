@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-kezhi",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-kezhi","title":"客至","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    舍南舍北皆春水，但见群鸥日日来。\n    花径不曾缘客扫，蓬门今始为君开。\n    盘飧市远无兼味，樽酒家贫只旧醅。\n    肯与邻翁相对饮，隔篱呼取尽余杯。\n","html":"<pre><code>舍南舍北皆春水，但见群鸥日日来。\n花径不曾缘客扫，蓬门今始为君开。\n盘飧市远无兼味，樽酒家贫只旧醅。\n肯与邻翁相对饮，隔篱呼取尽余杯。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

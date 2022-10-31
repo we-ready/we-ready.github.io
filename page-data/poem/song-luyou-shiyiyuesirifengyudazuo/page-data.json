@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-luyou-shiyiyuesirifengyudazuo",
+    "result": {"pageContext":{"frontmatter":{"id":"song-luyou-shiyiyuesirifengyudazuo","title":"十一月四日风雨大作","subtitle":null,"subject":null,"authors":"陆游","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    僵卧孤村不自哀，尚思为国戍轮台。\n    夜阑卧听风吹雨，铁马冰河入梦来。\n","html":"<pre><code>僵卧孤村不自哀，尚思为国戍轮台。\n夜阑卧听风吹雨，铁马冰河入梦来。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

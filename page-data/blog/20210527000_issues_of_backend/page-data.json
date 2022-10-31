@@ -1,5 +1,5 @@
 {
     "componentChunkName": "component---src-templates-blog-js",
     "path": "/blog/20210527000_issues_of_backend",
-    "result": {"pageContext":{"frontmatter":{"id":"20210527000_issues_of_backend","title":"后端开发中的疑难杂症","subtitle":"后端开发中的可能忽略的问题","subject":"Issues","authors":"Chris Wei","keywords":"bug;issue","tags":"sql;nestjs;nginx","category":"疑难杂症","cover":"https://media.inkscape.org/media/resources/file/Ladybug-icon.png","videos":null,"created_when":"2021-05-27","updated_when":"2021-05-27","level":200},"excerpt":"# 后端中的疑难杂症\n\n# SQL 语句\n\n> 构造的 SQL 语句，一定要检查，是否…\n","html":"<h1>后端中的疑难杂症</h1>\n<h2>SQL 语句</h2>\n<blockquote>\n<p>构造的 SQL 语句，一定要检查，是否有可能出现非法字符，比如单引号、双引号、加减好，等等</p>\n</blockquote>"}},
-    "staticQueryHashes": ["3159585216","3208650349","3659731985"]}
+    "result": {"pageContext":{"frontmatter":{"id":"20210527000_issues_of_backend","title":"后端开发中的疑难杂症","subtitle":"后端开发中的可能忽略的问题","subject":"Issues","authors":"Chris Wei","keywords":"bug;issue","tags":"sql;nestjs;nginx","category":"疑难杂症","cover":"https://media.inkscape.org/media/resources/file/Ladybug-icon.png","videos":null,"created_when":"2021-05-27T00:00:00.000Z","updated_when":"2021-05-27T00:00:00.000Z","level":200},"excerpt":"# 后端中的疑难杂症\n\n# SQL 语句\n\n> 构造的 SQL 语句，一定要检查，是否…\n","html":"<h1>后端中的疑难杂症</h1>\n<h2>SQL 语句</h2>\n<blockquote>\n<p>构造的 SQL 语句，一定要检查，是否有可能出现非法字符，比如单引号、双引号、加减好，等等</p>\n</blockquote>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

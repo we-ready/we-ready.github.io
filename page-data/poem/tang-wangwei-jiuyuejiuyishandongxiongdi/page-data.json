@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangwei-jiuyuejiuyishandongxiongdi",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangwei-jiuyuejiuyishandongxiongdi","title":"九月九忆山东兄弟","subtitle":null,"subject":null,"authors":"王维","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    独在异乡为异客，每逢佳节倍思亲。\n    遥知兄弟登高处，遍插茱萸少一人。\n","html":"<pre><code>独在异乡为异客，每逢佳节倍思亲。\n遥知兄弟登高处，遍插茱萸少一人。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

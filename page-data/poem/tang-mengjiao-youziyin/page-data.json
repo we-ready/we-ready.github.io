@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-mengjiao-youziyin",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-mengjiao-youziyin","title":"游子吟","subtitle":null,"subject":null,"authors":"孟郊","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    慈母手中线，游子身上衣。\n    临行密密缝，意恐迟迟归。\n    谁言寸草心，报得三春晖。\n","html":"<pre><code>慈母手中线，游子身上衣。\n临行密密缝，意恐迟迟归。\n谁言寸草心，报得三春晖。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

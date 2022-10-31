@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/qing-gongzizhen-jihaizashi",
+    "result": {"pageContext":{"frontmatter":{"id":"qing-gongzizhen-jihaizashi","title":"己亥杂诗·其二百二十","subtitle":null,"subject":null,"authors":"龚自珍","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"清朝","updated_when":null,"level":null},"excerpt":"    九州生气恃风雷，万马齐喑究可哀。\n    我劝天公重抖擞，不拘一格降人才。\n","html":"<pre><code>九州生气恃风雷，万马齐喑究可哀。\n我劝天公重抖擞，不拘一格降人才。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

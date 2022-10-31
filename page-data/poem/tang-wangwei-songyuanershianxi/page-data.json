@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangwei-songyuanershianxi",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangwei-songyuanershianxi","title":"送元二使安西","subtitle":null,"subject":null,"authors":"王维","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    渭城朝雨浥轻尘，客舍青青柳色新。\n    劝君更尽一杯酒，西出阳关无故人。\n","html":"<pre><code>渭城朝雨浥轻尘，客舍青青柳色新。\n劝君更尽一杯酒，西出阳关无故人。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

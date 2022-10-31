@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-lishangyin-wuti-xiangjianshinanbieyinan",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-lishangyin-wuti-xiangjianshinanbieyinan","title":"无题·相见时难别亦难","subtitle":null,"subject":null,"authors":"李商隐","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    相见时难别亦难，东风无力百花残。\n    春蚕到死丝方尽，蜡炬成灰泪始干。\n    晓镜但愁云鬓改，夜吟应觉月光寒。\n    蓬山此去无多路，青鸟殷勤为探看。\n","html":"<pre><code>相见时难别亦难，东风无力百花残。\n春蚕到死丝方尽，蜡炬成灰泪始干。\n晓镜但愁云鬓改，夜吟应觉月光寒。\n蓬山此去无多路，青鸟殷勤为探看。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

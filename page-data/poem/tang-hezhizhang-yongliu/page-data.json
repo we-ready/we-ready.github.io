@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-hezhizhang-yongliu",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-hezhizhang-yongliu","title":"咏柳","subtitle":null,"subject":null,"authors":"贺知章","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    碧玉妆成一树高，万条垂下绿丝绦。\n    不知细叶谁裁出，二月春风似剪刀。\n","html":"<pre><code>碧玉妆成一树高，万条垂下绿丝绦。\n不知细叶谁裁出，二月春风似剪刀。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

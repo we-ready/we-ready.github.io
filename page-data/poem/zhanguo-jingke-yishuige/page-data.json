@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/zhanguo-jingke-yishuige",
+    "result": {"pageContext":{"frontmatter":{"id":"zhanguo-jingke-yishuige","title":"易水歌","subtitle":null,"subject":null,"authors":"荆轲","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"战国·燕","updated_when":null,"level":null},"excerpt":"    风萧萧兮易水寒，壮士一去兮不复还。\n    探虎穴兮入蛟宫，仰天呼气兮成白虹。\n","html":"<pre><code>风萧萧兮易水寒，壮士一去兮不复还。\n探虎穴兮入蛟宫，仰天呼气兮成白虹。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

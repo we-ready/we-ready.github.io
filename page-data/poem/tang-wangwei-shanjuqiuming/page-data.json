@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wangwei-shanjuqiuming",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wangwei-shanjuqiuming","title":"山居秋暝","subtitle":null,"subject":null,"authors":"王维","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    空山新雨后，天气晚来秋。\n    明月松间照，清泉石上流。\n    竹喧归浣女，莲动下渔舟。\n    随意春芳歇，王孙自可留。\n","html":"<pre><code>空山新雨后，天气晚来秋。\n明月松间照，清泉石上流。\n竹喧归浣女，莲动下渔舟。\n随意春芳歇，王孙自可留。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

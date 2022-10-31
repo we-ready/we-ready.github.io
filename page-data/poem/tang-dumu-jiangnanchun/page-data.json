@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dumu-jiangnanchun",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dumu-jiangnanchun","title":"江南春","subtitle":null,"subject":null,"authors":"杜牧","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    千里莺啼绿映红，水村山郭酒旗风。\n    南朝四百八十寺，多少楼台烟雨中。\n","html":"<pre><code>千里莺啼绿映红，水村山郭酒旗风。\n南朝四百八十寺，多少楼台烟雨中。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

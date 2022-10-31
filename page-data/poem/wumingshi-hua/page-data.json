@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/wumingshi-hua",
+    "result": {"pageContext":{"frontmatter":{"id":"wumingshi-hua","title":"画","subtitle":null,"subject":null,"authors":"无名氏","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":null,"updated_when":null,"level":null},"excerpt":"    远看山有色，近听水无声；\n    春去花还在，人来鸟不惊。\n","html":"<pre><code>远看山有色，近听水无声；\n春去花还在，人来鸟不惊。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

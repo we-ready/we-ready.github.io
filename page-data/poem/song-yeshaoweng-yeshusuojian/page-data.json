@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-yeshaoweng-yeshusuojian",
+    "result": {"pageContext":{"frontmatter":{"id":"song-yeshaoweng-yeshusuojian","title":"夜书所见","subtitle":null,"subject":null,"authors":"叶绍翁","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    萧萧梧叶送寒声，江上秋风动客情。\n    知有儿童挑促织，夜深篱落一灯明。\n","html":"<pre><code>萧萧梧叶送寒声，江上秋风动客情。\n知有儿童挑促织，夜深篱落一灯明。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

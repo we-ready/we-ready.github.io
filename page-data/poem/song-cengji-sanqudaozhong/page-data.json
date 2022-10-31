@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-cengji-sanqudaozhong",
+    "result": {"pageContext":{"frontmatter":{"id":"song-cengji-sanqudaozhong","title":"三衢道中","subtitle":null,"subject":null,"authors":"曾几","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    梅子黄时日日晴，小溪泛尽却山行。\n    绿阴不减来时路，添得黄鹂四五声。\n","html":"<pre><code>梅子黄时日日晴，小溪泛尽却山行。\n绿阴不减来时路，添得黄鹂四五声。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

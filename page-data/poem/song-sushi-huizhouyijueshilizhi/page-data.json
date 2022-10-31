@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-sushi-huizhouyijueshilizhi",
+    "result": {"pageContext":{"frontmatter":{"id":"song-sushi-huizhouyijueshilizhi","title":"惠州一绝·食荔枝","subtitle":null,"subject":null,"authors":"苏轼","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    罗浮山下四时春，卢橘杨梅次第新。\n    日啖荔枝三百颗，不辞长作岭南人。\n","html":"<pre><code>罗浮山下四时春，卢橘杨梅次第新。\n日啖荔枝三百颗，不辞长作岭南人。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

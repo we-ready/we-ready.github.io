@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wanganshi-yuanri",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wanganshi-yuanri","title":"元日","subtitle":null,"subject":null,"authors":"王安石","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    爆竹声中一岁除，春风送暖入屠苏。\n    千门万户曈曈日，总把新桃换旧符。\n","html":"<pre><code>爆竹声中一岁除，春风送暖入屠苏。\n千门万户曈曈日，总把新桃换旧符。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkBlog1=self.webpackChunkBlog1||[]).push([[241],{9355:function(e,t,n){n.r(t),n.d(t,{default:function(){return a}});var l=n(2772),c=n(9197),r=n(7294);function a(){return r.createElement(l.i8,{headTitle:"重置密码"},r.createElement(c.W2,{width:"100%",height:"60%",className:"flex-center align-center"},r.createElement(l.z1,null)))}}}]);
-//# sourceMappingURL=component---src-pages-form-reset-tsx-847c9d178e4fa3e8b8ea.js.map

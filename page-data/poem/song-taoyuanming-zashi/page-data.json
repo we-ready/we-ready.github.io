@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-taoyuanming-zashi",
+    "result": {"pageContext":{"frontmatter":{"id":"song-taoyuanming-zashi","title":"杂诗","subtitle":null,"subject":null,"authors":"陶渊明","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    人生无根蒂，飘如陌上尘。\n    分散逐风转，此已非常身。\n    落地为兄弟，何必骨肉亲！\n    得欢当作乐，斗酒聚比邻。\n    盛年不重来，一日难再晨。***\n    及时当勉励，岁月不待人。\n","html":"<pre><code>人生无根蒂，飘如陌上尘。\n分散逐风转，此已非常身。\n落地为兄弟，何必骨肉亲！\n得欢当作乐，斗酒聚比邻。\n盛年不重来，一日难再晨。***\n及时当勉励，岁月不待人。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

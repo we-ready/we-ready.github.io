@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-huangtingjian-qingpingle-chunguihechu",
+    "result": {"pageContext":{"frontmatter":{"id":"song-huangtingjian-qingpingle-chunguihechu","title":"清平乐·春归何处","subtitle":null,"subject":"清平乐","authors":"黄庭坚","keywords":null,"tags":"宋词","category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    春归何处？寂寞无行路。\n    若有人知春去处，唤取归来同住。\n\n    春无踪迹谁知？除非问取黄鹂。\n    百啭无人能解，因风飞过蔷薇。\n","html":"<pre><code>春归何处？寂寞无行路。\n若有人知春去处，唤取归来同住。\n\n春无踪迹谁知？除非问取黄鹂。\n百啭无人能解，因风飞过蔷薇。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

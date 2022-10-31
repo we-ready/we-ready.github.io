@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-yangwanli-zhizinongbing",
+    "result": {"pageContext":{"frontmatter":{"id":"song-yangwanli-zhizinongbing","title":"稚子弄冰","subtitle":null,"subject":null,"authors":"杨万里","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    稚子金盆脱晓冰，彩丝穿取当银钲。\n    敲成玉磬穿林响，忽作玻璃碎地声。\n","html":"<pre><code>稚子金盆脱晓冰，彩丝穿取当银钲。\n敲成玉磬穿林响，忽作玻璃碎地声。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

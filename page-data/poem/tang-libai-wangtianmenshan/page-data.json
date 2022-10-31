@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-libai-wangtianmenshan",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-libai-wangtianmenshan","title":"望天门山","subtitle":null,"subject":null,"authors":"李白","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    天门中断楚江开，碧水东流至此回。\n    两岸青山相对出，孤帆一片日边来。\n","html":"<pre><code>天门中断楚江开，碧水东流至此回。\n两岸青山相对出，孤帆一片日边来。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

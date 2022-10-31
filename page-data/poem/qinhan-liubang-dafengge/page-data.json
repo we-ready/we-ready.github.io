@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/qinhan-liubang-dafengge",
+    "result": {"pageContext":{"frontmatter":{"id":"qinhan-liubang-dafengge","title":"大风歌","subtitle":null,"subject":null,"authors":"刘邦","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"秦汉","updated_when":null,"level":null},"excerpt":"    大风起兮云飞扬。\n    威加海内兮归故乡。\n    安得猛士兮守四方！\n","html":"<pre><code>大风起兮云飞扬。\n威加海内兮归故乡。\n安得猛士兮守四方！\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

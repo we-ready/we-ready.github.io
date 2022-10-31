@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-jueju-jiangbishanqing",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-jueju-jiangbishanqing","title":"绝句·江碧山青","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    江碧鸟逾白，山青花欲燃。\n    今春看又过，何日是归年。\n","html":"<pre><code>江碧鸟逾白，山青花欲燃。\n今春看又过，何日是归年。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

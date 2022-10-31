@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/song-wangmian-momei",
+    "result": {"pageContext":{"frontmatter":{"id":"song-wangmian-momei","title":"墨梅","subtitle":null,"subject":null,"authors":"王冕","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"宋朝","updated_when":null,"level":null},"excerpt":"    我家洗砚池头树，朵朵花开淡墨痕。\n    不要人夸好颜色，只留清气满乾坤。\n","html":"<pre><code>我家洗砚池头树，朵朵花开淡墨痕。\n不要人夸好颜色，只留清气满乾坤。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

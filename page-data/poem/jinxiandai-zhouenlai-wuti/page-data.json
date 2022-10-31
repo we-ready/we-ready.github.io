@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/jinxiandai-zhouenlai-wuti",
+    "result": {"pageContext":{"frontmatter":{"id":"jinxiandai-zhouenlai-wuti","title":"无题","subtitle":null,"subject":null,"authors":"周恩来","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"近现代","updated_when":null,"level":null},"excerpt":"    大江歌罢掉头东，邃密群科济世穷。\n    面壁十年图破壁，难酬蹈海亦英雄。\n","html":"<pre><code>大江歌罢掉头东，邃密群科济世穷。\n面壁十年图破壁，难酬蹈海亦英雄。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

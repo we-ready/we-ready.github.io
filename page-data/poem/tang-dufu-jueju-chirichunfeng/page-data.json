@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-jueju-chirichunfeng",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-jueju-chirichunfeng","title":"绝句·迟日春风","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    迟日江山丽，春风花草香。\n    泥融飞燕子，沙暖睡鸳鸯。\n","html":"<pre><code>迟日江山丽，春风花草香。\n泥融飞燕子，沙暖睡鸳鸯。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

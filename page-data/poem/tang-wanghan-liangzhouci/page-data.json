@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-wanghan-liangzhouci",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-wanghan-liangzhouci","title":"凉州词","subtitle":null,"subject":null,"authors":"王翰","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    葡萄美酒夜光杯，欲饮琵琶马上催。\n    醉卧沙场君莫笑，古来征战几人回？\n","html":"<pre><code>葡萄美酒夜光杯，欲饮琵琶马上催。\n醉卧沙场君莫笑，古来征战几人回？\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

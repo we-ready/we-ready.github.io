@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-liqiao-feng",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-liqiao-feng","title":"风","subtitle":null,"subject":null,"authors":"李峤","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    解落三秋叶，能开二月花；\n    过江千尺浪，入竹万竿斜。\n","html":"<pre><code>解落三秋叶，能开二月花；\n过江千尺浪，入竹万竿斜。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}

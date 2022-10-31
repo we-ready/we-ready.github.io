@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-templates-blog-js",
+    "path": "/poem/tang-dufu-lüyeshuhuai",
+    "result": {"pageContext":{"frontmatter":{"id":"tang-dufu-lüyeshuhuai","title":"旅夜书怀","subtitle":null,"subject":null,"authors":"杜甫","keywords":null,"tags":null,"category":"诗词歌赋","cover":null,"videos":null,"created_when":"唐朝","updated_when":null,"level":null},"excerpt":"    细草微风岸，危樯独夜舟。\n    星垂平野阔，月涌大江流。***\n    名岂文章著，官应老病休。\n    飘飘何所似，天地一沙鸥。\n","html":"<pre><code>细草微风岸，危樯独夜舟。\n星垂平野阔，月涌大江流。***\n名岂文章著，官应老病休。\n飘飘何所似，天地一沙鸥。\n</code></pre>"}},
+    "staticQueryHashes": ["2877226700","3159585216","3659731985","3670619862"]}
